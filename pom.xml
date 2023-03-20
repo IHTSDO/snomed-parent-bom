@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -63,6 +63,7 @@
         <spring.version>5.3.25</spring.version>
         <spring-boot.version>2.7.8</spring-boot.version>
         <spring-cloud-aws-version>2.2.6.RELEASE</spring-cloud-aws-version>
+        <spring-cloud.version>2021.0.6</spring-cloud.version> <!-- Note anything newer than this needs Java 17+ -->
 
         <activemq-broker.version>5.17.4</activemq-broker.version>
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
@@ -189,6 +190,13 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <!-- _                      _
