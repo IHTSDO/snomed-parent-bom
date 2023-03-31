@@ -604,6 +604,12 @@
                 <artifactId>hapi-fhir-jpaserver-base</artifactId>
                 <version>${hapi-fhir.version}</version>
             </dependency>
+            <!-- override hapi-fhir json-smart version (CVE) -->
+            <dependency>
+                <groupId>net.minidev</groupId>
+                <artifactId>json-smart</artifactId>
+                <version>2.4.10</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -696,9 +702,6 @@
         <repository>
             <id>ihtsdo-releases</id>
             <name>ihtsdo-releases</name>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -710,9 +713,6 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
             <url>https://nexus3.ihtsdotools.org/repository/maven-snapshots/</url>
         </repository>
     </repositories>
@@ -721,9 +721,6 @@
         <pluginRepository>
             <id>ihtsdo-releases</id>
             <name>ihtsdo-releases</name>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -735,9 +732,6 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
             <url>https://nexus3.ihtsdotools.org/repository/maven-snapshots/</url>
         </pluginRepository>
     </pluginRepositories>
