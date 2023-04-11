@@ -70,7 +70,7 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
         <spring.version>5.3.26</spring.version>
-        <spring-boot.version>2.7.8</spring-boot.version>
+        <spring-boot.version>2.7.10</spring-boot.version>
         <spring-cloud-aws-version>2.2.6.RELEASE</spring-cloud-aws-version>
         <aws-java-sdk.version>1.11.221</aws-java-sdk.version>
         <spring-cloud.version>2021.0.6</spring-cloud.version> <!-- Note anything newer than this needs Java 17+ -->
