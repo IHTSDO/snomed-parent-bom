@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -56,7 +56,7 @@
         <otf-common.version>5.10.1</otf-common.version>
         <ihtsdo-spring-sso.version>3.1.3</ihtsdo-spring-sso.version>
         <snomed-boot.version>4.0.3</snomed-boot.version>
-        <snomed-drools.version>3.4.0</snomed-drools.version>
+        <snomed-drools.version>3.3.1</snomed-drools.version>
         <snomed-owl-toolkit.version>3.0.10</snomed-owl-toolkit.version>
         <elasticvc.version>3.3.0</elasticvc.version>
         <elasticsearch.version>7.10.2</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
