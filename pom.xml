@@ -58,8 +58,12 @@
         <snomed-boot.version>4.0.3</snomed-boot.version>
         <snomed-drools.version>3.3.1</snomed-drools.version>
         <snomed-owl-toolkit.version>3.0.10</snomed-owl-toolkit.version>
-        <elasticvc.version>3.3.0</elasticvc.version>
+        <!--
+        Current Elasticsearch _Server_ version supported by AWS is 7.10.0
+        N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
+        -->
         <elasticsearch.version>7.10.2</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
+        <elasticvc.version>3.3.0</elasticvc.version>
         <lucene.version>8.7.0</lucene.version><!-- Should match the elasticvc -> elasticsearch -> lucene version -->
         <hapi-fhir.version>6.4.4</hapi-fhir.version>
         <docker.image.prefix>snomedinternational</docker.image.prefix>
