@@ -75,7 +75,7 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
         <spring.version>5.3.27</spring.version> <!-- Note anything v6* needs Java 17+, https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-Versions -->
-        <spring-boot.version>2.7.10</spring-boot.version> <!-- Note anything v3* needs Java 17+, https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Release-Notes -->
+        <spring-boot.version>2.7.11</spring-boot.version> <!-- Note anything v3* needs Java 17+, https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Release-Notes -->
         <spring-cloud.version>2021.0.6</spring-cloud.version> <!-- Note anything since 2022* needs boot v3* and hence Java 17+, https://spring.io/projects/spring-cloud -->
         <spring-cloud-aws-version>2.2.6.RELEASE</spring-cloud-aws-version>
         <aws-java-sdk.version>1.12.450</aws-java-sdk.version>
