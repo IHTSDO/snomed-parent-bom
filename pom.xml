@@ -82,9 +82,9 @@
         <drools.version>8.37.0.Final</drools.version>
         <activemq-broker.version>5.17.4</activemq-broker.version>
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
-        <dependency-check-maven.version>8.1.1</dependency-check-maven.version>
+        <dependency-check-maven.version>8.3.1</dependency-check-maven.version>
         <gson.version>2.10.1</gson.version>
-        <jackson.version>2.14.2</jackson.version>
+        <jackson.version>2.15.2</jackson.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <jdeb-plugin.version>1.10</jdeb-plugin.version>
         <json.version>20230227</json.version>
