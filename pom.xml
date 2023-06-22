@@ -767,6 +767,8 @@
                     <failBuildOnCVSS>7</failBuildOnCVSS>
                     <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
                     <failOnError>true</failOnError>
+                    <!-- If we need to disable OSS, due to server outage, toggle the boolean on the following line.-->
+                    <ossindexAnalyzerEnabled>true</ossindexAnalyzerEnabled>
                 </configuration>
                 <dependencies>
                     <dependency>
