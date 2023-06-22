@@ -5,19 +5,18 @@
 
 # Instructions
 
-When a project fails to build due to a CVE there are several options:
+When a project fails to build due to a CVE there are at least 3 options:
 
-- An updated version of the library is available and published.
-  - See UPDATE VERSION section, below.
-- An updated version of the library is NOT available.
+1. An updated version of the library is available and published.
+2. An updated version of the library is NOT available.
     - We then have two options:
       - Wait for one to be created, most supported products issue a fix within hours or a few days.
-      - Ignore the CVE.
-          - See IGNORE CVE section, below.
+      - Ignore the CVE, See IGNORE CVE section, below.
+3. Exclude the library from the dependency.
 
 Here are the instructions for each in turn:
 
-## UPDATE VERSION: If there is a fixed version available from the jar/lib supplier.
+## Option 1) UPDATE VERSION: If there is a fixed version available from the jar/lib supplier.
 
 If a project, which uses this BOM fails to build with a CVE error you can follow these instructions.
 
@@ -53,7 +52,7 @@ In detail:
 * When you are happy push the bom project to git (wait for it to build)
 * Then push the affected project, which should now pass.
 
-## IGNORE CVE: If we wish to ignore the CVE, for whatever reason follow these steps:
+## Option 2) IGNORE CVE: If we wish to ignore the CVE, for whatever reason follow these steps:
 
 In summary, you will be updating 3 projects:
 * Add exception to [snomed-parent-owasp](https://github.com/IHTSDO/snomed-parent-owasp)
@@ -71,9 +70,25 @@ Here are the detailed instructions:
 * Update BOM version, to use the new OWASP version, xpath in the bom project is `/project/properties/snomed-parent-owasp.version`
 * Update affected project, to use the new BOM version.
 
-Again these steps can be tested with various Maven commands, locally.
+## Option 3) Exclude the library from the dependency
+If you do not need the library at all, either do not include it in your `pom.xml`, or if it is from a third party exclude it as follows:
+
+```xml
+<dependency>
+    <groupId>a.third.party.group</groupId>
+    <artifactId>artifact-id</artifactId>
+    <exclusions>
+        <exclusion>
+            <groupId>group.to.exclude</groupId>
+            <artifactId>artifact.to.exclude</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+```
 
 # Useful Maven links:
+
+Again these steps can be tested with various Maven commands, locally.
 
 * Maven Versions Plugin: https://www.mojohaus.org/versions/versions-maven-plugin/index.html
 * Maven Dependency Plugin: http://jeremylong.github.io/DependencyCheck/dependency-check-maven/plugin-info.html
