@@ -16,3 +16,4 @@ application-*.properties
 input
 .idea
 /.run/
+.*
