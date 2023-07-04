@@ -769,6 +769,7 @@
                     <failOnError>true</failOnError>
                     <!-- If we need to disable OSS, due to server outage, toggle the boolean on the following line.-->
                     <ossindexAnalyzerEnabled>true</ossindexAnalyzerEnabled>
+                    <formats>XML,HTML</formats>
                 </configuration>
                 <dependencies>
                     <dependency>
