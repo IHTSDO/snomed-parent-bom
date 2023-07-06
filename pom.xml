@@ -58,7 +58,7 @@
         <ihtsdo-spring-sso.version>3.1.3</ihtsdo-spring-sso.version>
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
         <snomed-boot.version>4.0.4</snomed-boot.version>
-        <snomed-drools.version>3.3.1</snomed-drools.version>
+        <snomed-drools.version>3.3.2-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>3.0.10</snomed-owl-toolkit.version>
         <!--
         Current Elasticsearch _Server_ version supported by AWS is 7.10.0
@@ -80,7 +80,7 @@
         <spring-cloud.version>2021.0.7</spring-cloud.version> <!-- Note anything since 2022* needs boot v3* and hence Java 17+, https://spring.io/projects/spring-cloud -->
         <spring-cloud-aws-version>2.2.6.RELEASE</spring-cloud-aws-version>
         <aws-java-sdk.version>1.12.486</aws-java-sdk.version>
-        <drools.version>8.37.0.Final</drools.version>
+        <drools.version>8.40.0.Final</drools.version>
         <activemq-broker.version>5.17.4</activemq-broker.version>
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
         <dependency-check-maven.version>8.3.1</dependency-check-maven.version>
@@ -391,6 +391,22 @@
                 <version>1.7.0</version>
             </dependency>
 
+            <!--  ____                  _
+                 |  _ \ _ __ ___   ___ | |___
+                 | | | | '__/ _ \ / _ \| / __|
+                 | |_| | | | (_) | (_) | \__ \
+                 |____/|_|  \___/ \___/|_|___/-->
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-core</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-mvel</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+
             <!-- _____         _
                 |_   _|__  ___| |_
                   | |/ _ \/ __| __|
@@ -533,21 +549,6 @@
                 <groupId>javax.persistence</groupId>
                 <artifactId>javax.persistence-api</artifactId>
                 <version>2.2</version>
-            </dependency>
-            <dependency>
-                <groupId>org.kie</groupId>
-                <artifactId>kie-api</artifactId>
-                <version>${drools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.kie</groupId>
-                <artifactId>kie-internal</artifactId>
-                <version>${drools.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.drools</groupId>
-                <artifactId>drools-mvel</artifactId>
-                <version>${drools.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.thoughtworks.xstream</groupId>
