@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>1.0.11-SNAPSHOT</version>
+    <version>1.0.11</version>
 
     <packaging>pom</packaging>
 
