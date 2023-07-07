@@ -398,7 +398,38 @@
                  |____/|_|  \___/ \___/|_|___/-->
             <dependency>
                 <groupId>org.drools</groupId>
+                <artifactId>drools-engine</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.kie</groupId>
+                <artifactId>kie-ci</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-decisiontables</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
                 <artifactId>drools-core</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-core-dynamic</artifactId>
+                <version>7.74.0.Final</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-test</artifactId>
                 <version>${drools.version}</version>
             </dependency>
             <dependency>
@@ -406,6 +437,23 @@
                 <artifactId>drools-mvel</artifactId>
                 <version>${drools.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.kie</groupId>
+                <artifactId>kie-api</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.kie</groupId>
+                <artifactId>kie-internal</artifactId>
+                <version>${drools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.drools.testcoverage</groupId>
+                <artifactId>drools-test-suite</artifactId>
+                <version>${drools.version}</version>
+                <scope>test</scope>
+            </dependency>
+
 
             <!-- _____         _
                 |_   _|__  ___| |_
