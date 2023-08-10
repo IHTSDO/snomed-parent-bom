@@ -59,7 +59,7 @@
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
         <snomed-boot.version>4.0.4</snomed-boot.version>
         <snomed-drools.version>3.4.0-SNAPSHOT</snomed-drools.version>
-        <snomed-owl-toolkit.version>3.1.0-SNAPSHOT</snomed-owl-toolkit.version>
+        <snomed-owl-toolkit.version>4.0.0-SNAPSHOT</snomed-owl-toolkit.version>
         <!--
         Current Elasticsearch _Server_ version supported by AWS is 7.10.0
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
