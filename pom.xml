@@ -60,6 +60,7 @@
         <snomed-boot.version>4.0.4</snomed-boot.version>
         <snomed-drools.version>3.4.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>4.0.0-SNAPSHOT</snomed-owl-toolkit.version>
+        <snomed-utilities.version>1.5.1-SNAPSHOT</snomed-utilities.version>
         <!--
         Current Elasticsearch _Server_ version supported by AWS is 7.10.0
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
@@ -81,10 +82,12 @@
         <spring.security.version>5.7.10</spring.security.version>
         <spring-cloud.version>2021.0.7</spring-cloud.version> <!-- Note anything since 2022* needs boot v3* and hence Java 17+, https://spring.io/projects/spring-cloud -->
         <spring-cloud-aws-version>2.2.6.RELEASE</spring-cloud-aws-version>
+        <spring-cloud-starter-consul.version>4.0.3</spring-cloud-starter-consul.version>
+        <spring-cloud-starter-vault.version>4.0.1</spring-cloud-starter-vault.version>
         <aws-java-sdk.version>1.12.486</aws-java-sdk.version>
         <drools.version>8.37.0.Final</drools.version>
         <drools-dynamic.version>7.74.0.Final</drools-dynamic.version>
-        <activemq-broker.version>5.17.4</activemq-broker.version>
+        <activemq.version>5.18.2</activemq.version>
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
         <dependency-check-maven.version>8.3.1</dependency-check-maven.version>
         <gson.version>2.10.1</gson.version>
@@ -92,8 +95,8 @@
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <jdeb-plugin.version>1.10</jdeb-plugin.version>
         <json.version>20230227</json.version>
-        <log4j.version>2.17.2</log4j.version>
-        <slf4j.version>1.7.35</slf4j.version>
+        <log4j.version>2.20.0</log4j.version>
+        <slf4j.version>2.0.7</slf4j.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <springfox-swagger.version>3.0.0</springfox-swagger.version>
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
@@ -106,6 +109,8 @@
         <tomcat-embed.version>9.0.76</tomcat-embed.version>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
         <dockerfile-maven-plugin.version>1.4.10</dockerfile-maven-plugin.version>
+        <jmockit.version>1.49</jmockit.version>
+        <easymock.version>4.3</easymock.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -212,11 +217,36 @@
             <dependency>
                 <groupId>org.snomed.languages</groupId>
                 <artifactId>snomed-template-parser</artifactId>
-                <version>2.1.0</version>
+                <version>2.1.0-SNAPSHOT</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.slf4j</groupId>
                         <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.snomed.otf</groupId>
+                <artifactId>spring-data-elasticsearch</artifactId>
+                <version>4.1.16</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ihtsdo.otf</groupId>
+                <artifactId>snomed-query-service</artifactId>
+                <version>3.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ihtsdo.drools</groupId>
+                <artifactId>snomed-drools-rf2-validator</artifactId>
+                <version>${snomed-drools.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.collections</groupId>
+                        <artifactId>google-collections</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.snomed.otf</groupId>
+                        <artifactId>snomed-boot</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -366,6 +396,11 @@
                 <artifactId>log4j-1.2-api</artifactId>
                 <version>${log4j.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
 
             <!-- ____
                 / ___|_      ____ _  __ _  __ _  ___ _ __
@@ -445,7 +480,18 @@
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-broker</artifactId>
-                <version>${activemq-broker.version}</version>
+                <version>${activemq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-client</artifactId>
+                <version>${activemq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-kahadb-store</artifactId>
+                <version>${activemq.version}</version>
+                <scope>runtime</scope>
             </dependency>
             <dependency>
                 <groupId>com.google.code.gson</groupId>
@@ -481,6 +527,11 @@
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
                 <version>2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math3</artifactId>
+                <version>3.6</version>
             </dependency>
             <dependency>
                 <groupId>commons-validator</groupId>
@@ -724,6 +775,11 @@
                 <version>1.12.486</version>
             </dependency>
             <dependency>
+                <groupId>com.github.awslabs</groupId>
+                <artifactId>aws-request-signing-apache-interceptor</artifactId>
+                <version>f39dfaf107</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.jena</groupId>
                 <artifactId>jena-core</artifactId>
                 <version>4.9.0</version>
@@ -758,6 +814,165 @@
                 <artifactId>jaxb-impl</artifactId>
                 <version>2.3.3</version>
                 <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-aws-context</artifactId>
+                <version>${spring-cloud-aws-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ihtsdo.snomed.util</groupId>
+                <artifactId>snomed-utilities</artifactId>
+                <version>${snomed-utilities.version}</version>
+            </dependency>
+
+            <!-- Liquibase -->
+            <dependency>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-core</artifactId>
+                <version>4.23.1</version>
+            </dependency>
+
+            <!-- H2 -->
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>2.2.220</version>
+            </dependency>
+
+            <!--  MYSQL -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>2.9.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>8.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jmockit</groupId>
+                <artifactId>jmockit</artifactId>
+                <version>${jmockit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.easymock</groupId>
+                <artifactId>easymock</artifactId>
+                <version>${easymock.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-text</artifactId>
+                <version>1.10.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.java-diff-utils</groupId>
+                <artifactId>java-diff-utils</artifactId>
+                <version>4.11</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>1.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.json-simple</groupId>
+                <artifactId>json-simple</artifactId>
+                <version>1.1</version>
+            </dependency>
+
+            <!-- S3 -->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.9</version>
+            </dependency>
+
+            <!-- Consul and Vault -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+                <version>${spring-cloud-starter-consul.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-consul-config</artifactId>
+                <version>${spring-cloud-starter-consul.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-vault-config</artifactId>
+                <version>${spring-cloud-starter-vault.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ihtsdo.otf</groupId>
+                <artifactId>spellcheck-core</artifactId>
+                <version>1.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>javax.mail-api</artifactId>
+                <version>1.6.2</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>1.5.0-b01</version>
+            </dependency>
+            <dependency>
+                <groupId>org.commonmark</groupId>
+                <artifactId>commonmark</artifactId>
+                <version>0.21.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.xhtmlrenderer</groupId>
+                <artifactId>flying-saucer-pdf-openpdf</artifactId>
+                <version>9.1.22</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.16.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.facebook.presto</groupId>
+                <artifactId>presto-parser</artifactId>
+                <version>0.283</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mangofactory</groupId>
+                <artifactId>swagger-springmvc</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+                <version>1.4</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-digester3</artifactId>
+                <version>3.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.29.2-GA</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>3.5.13</version>
+            </dependency>
+            <dependency>
+                <groupId>org.snomed.quality</groupId>
+                <artifactId>mrcm-validator</artifactId>
+                <version>1.11.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
