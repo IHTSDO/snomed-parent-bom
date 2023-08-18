@@ -101,6 +101,7 @@
         <springfox-swagger.version>3.0.0</springfox-swagger.version>
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <commons-io.version>2.11.0</commons-io.version>
         <xstream.version>1.4.20</xstream.version>
         <joda-time.version>2.12.4</joda-time.version>
@@ -1005,6 +1006,15 @@
                     <groupId>org.vafer</groupId>
                     <artifactId>jdeb</artifactId>
                     <version>${jdeb-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                    </configuration>
+                    <version>${maven-compiler-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
