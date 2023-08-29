@@ -62,6 +62,7 @@
         <snomed-owl-toolkit.version>4.0.0-SNAPSHOT</snomed-owl-toolkit.version>
         <snomed-utilities.version>2.0.0-SNAPSHOT</snomed-utilities.version>
         <snomed-template-parser.version>3.0.0-SNAPSHOT</snomed-template-parser.version>
+        <snomed-ecl-parser.version>3.0.0-SNAPSHOT</snomed-ecl-parser.version>
         <!--
         Current Elasticsearch _Server_ version supported by AWS is 7.10.0
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
@@ -169,7 +170,7 @@
             <dependency>
                 <groupId>org.snomed.languages</groupId>
                 <artifactId>snomed-ecl-parser</artifactId>
-                <version>2.1.0</version>
+                <version>${snomed-ecl-parser.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.snomed.languages</groupId>
