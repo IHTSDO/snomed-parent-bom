@@ -66,7 +66,7 @@
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
         -->
         <elasticsearch.version>7.10.2</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
-        <elasticvc.version>3.3.0</elasticvc.version>
+        <elasticvc.version>4.0.0-SNAPSHOT</elasticvc.version>
         <lucene.version>8.7.0</lucene.version><!-- Should match the elasticvc -> elasticsearch -> lucene version -->
         <hapi-fhir.version>6.6.2</hapi-fhir.version>
         <docker.image.prefix>snomedinternational</docker.image.prefix>
