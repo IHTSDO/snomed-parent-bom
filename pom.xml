@@ -65,13 +65,17 @@
         <snomed-ecl-parser.version>3.0.0-SNAPSHOT</snomed-ecl-parser.version>
         <mrcm-validator.version>2.0.0-SNAPSHOT</mrcm-validator.version>
         <snomed-scg-parser.version>3.0.0-SNAPSHOT</snomed-scg-parser.version>
-        <spring-data-elasticsearch.version>4.1.16</spring-data-elasticsearch.version>
+        <snomed-query-service.version>4.0.0-SNAPSHOT</snomed-query-service.version>
+        <cis-client.version>1.0.0</cis-client.version>
+        <spellcheck-core.version>2.0.0-SNAPSHOT</spellcheck-core.version>
+
         <!--
         Current Elasticsearch _Server_ version supported by AWS is 7.10.0
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
         -->
         <elasticsearch.version>7.10.2</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
         <elasticvc.version>4.0.0-SNAPSHOT</elasticvc.version>
+        <spring-data-elasticsearch.version>4.1.16</spring-data-elasticsearch.version>
         <lucene.version>8.7.0</lucene.version><!-- Should match the elasticvc -> elasticsearch -> lucene version -->
         <hapi-fhir.version>6.6.2</hapi-fhir.version>
         <docker.image.prefix>snomedinternational</docker.image.prefix>
@@ -183,7 +187,7 @@
             <dependency>
                 <groupId>org.snomed.cis</groupId>
                 <artifactId>cis-client</artifactId>
-                <version>1.0.0</version>
+                <version>${cis-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>us.monoid.web</groupId>
@@ -239,7 +243,7 @@
             <dependency>
                 <groupId>org.ihtsdo.otf</groupId>
                 <artifactId>snomed-query-service</artifactId>
-                <version>4.0.0-SNAPSHOT</version>
+                <version>${snomed-query-service.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.ihtsdo.drools</groupId>
@@ -419,21 +423,6 @@
                  ___) \ V  V / (_| | (_| | (_| |  __/ |
                 |____/ \_/\_/ \__,_|\__, |\__, |\___|_|
                                     |___/ |___/ -->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${springfox-swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${springfox-swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>${springfox-swagger.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
@@ -945,7 +934,7 @@
             <dependency>
                 <groupId>org.ihtsdo.otf</groupId>
                 <artifactId>spellcheck-core</artifactId>
-                <version>2.0.0-SNAPSHOT</version>
+                <version>${spellcheck-core.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.mail</groupId>
