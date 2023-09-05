@@ -64,6 +64,7 @@
         <snomed-template-parser.version>3.0.0-SNAPSHOT</snomed-template-parser.version>
         <snomed-ecl-parser.version>3.0.0-SNAPSHOT</snomed-ecl-parser.version>
         <mrcm-validator.version>2.0.0-SNAPSHOT</mrcm-validator.version>
+        <snomed-scg-parser.version>2.0.1</snomed-scg-parser.version>
         <!--
         Current Elasticsearch _Server_ version supported by AWS is 7.10.0
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
@@ -176,7 +177,7 @@
             <dependency>
                 <groupId>org.snomed.languages</groupId>
                 <artifactId>snomed-scg-parser</artifactId>
-                <version>2.0.1</version>
+                <version>${snomed-scg-parser.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.snomed.cis</groupId>
