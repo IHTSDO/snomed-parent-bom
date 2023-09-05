@@ -424,6 +424,22 @@
                 |____/ \_/\_/ \__,_|\__, |\__, |\___|_|
                                     |___/ |___/ -->
             <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox-swagger.version}</version>
+            </dependency>
+            <!-- Remove above swagger dependencies after upgrading reporting and classification service -->
+            <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>1.7.0</version>
@@ -703,7 +719,7 @@
             <dependency>
                 <groupId>io.kaicode</groupId>
                 <artifactId>branch-path-uri-rewrite-filter</artifactId>
-                <version>3.0.0</version>
+                <version>4.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>net.jodah</groupId>
