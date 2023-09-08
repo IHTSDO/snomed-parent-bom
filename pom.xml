@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>2.0.0</version>
 
     <packaging>pom</packaging>
 
@@ -54,27 +54,27 @@
              ___) | | | | (_) | | | | | |  __/ (_| |
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
         <snomed-parent-owasp.version>1.0.3</snomed-parent-owasp.version>
-        <otf-common.version>6.0.0-SNAPSHOT</otf-common.version>
-        <ihtsdo-spring-sso.version>4.0.0-SNAPSHOT</ihtsdo-spring-sso.version>
+        <otf-common.version>6.0.0</otf-common.version>
+        <ihtsdo-spring-sso.version>4.0.0</ihtsdo-spring-sso.version>
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
-        <snomed-boot.version>5.0.0-SNAPSHOT</snomed-boot.version>
-        <snomed-drools.version>4.0.0-SNAPSHOT</snomed-drools.version>
-        <snomed-owl-toolkit.version>4.0.0-SNAPSHOT</snomed-owl-toolkit.version>
-        <snomed-utilities.version>2.0.0-SNAPSHOT</snomed-utilities.version>
-        <snomed-template-parser.version>3.0.0-SNAPSHOT</snomed-template-parser.version>
-        <snomed-ecl-parser.version>3.0.0-SNAPSHOT</snomed-ecl-parser.version>
-        <mrcm-validator.version>2.0.0-SNAPSHOT</mrcm-validator.version>
-        <snomed-scg-parser.version>3.0.0-SNAPSHOT</snomed-scg-parser.version>
-        <snomed-query-service.version>4.0.0-SNAPSHOT</snomed-query-service.version>
+        <snomed-boot.version>5.0.0</snomed-boot.version>
+        <snomed-drools.version>4.0.0</snomed-drools.version>
+        <snomed-owl-toolkit.version>4.0.0</snomed-owl-toolkit.version>
+        <snomed-utilities.version>2.0.0</snomed-utilities.version>
+        <snomed-template-parser.version>3.0.0</snomed-template-parser.version>
+        <snomed-ecl-parser.version>3.0.0</snomed-ecl-parser.version>
+        <mrcm-validator.version>2.0.0</mrcm-validator.version>
+        <snomed-scg-parser.version>3.0.0</snomed-scg-parser.version>
+        <snomed-query-service.version>4.0.0</snomed-query-service.version>
         <cis-client.version>1.0.0</cis-client.version>
-        <spellcheck-core.version>2.0.0-SNAPSHOT</spellcheck-core.version>
+        <spellcheck-core.version>2.0.0</spellcheck-core.version>
 
         <!--
         Current Elasticsearch _Server_ version supported by AWS is 7.10.0
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
         -->
         <elasticsearch.version>7.10.2</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
-        <elasticvc.version>4.0.0-SNAPSHOT</elasticvc.version>
+        <elasticvc.version>4.0.0</elasticvc.version>
         <spring-data-elasticsearch.version>4.1.16</spring-data-elasticsearch.version>
         <lucene.version>8.7.0</lucene.version><!-- Should match the elasticvc -> elasticsearch -> lucene version -->
         <hapi-fhir.version>6.6.2</hapi-fhir.version>
@@ -702,7 +702,7 @@
             <dependency>
                 <groupId>io.kaicode</groupId>
                 <artifactId>branch-path-uri-rewrite-filter</artifactId>
-                <version>4.0.0-SNAPSHOT</version>
+                <version>4.0.0</version>
             </dependency>
             <dependency>
                 <groupId>net.jodah</groupId>
