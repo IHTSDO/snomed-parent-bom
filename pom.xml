@@ -119,6 +119,7 @@
         <dockerfile-maven-plugin.version>1.4.10</dockerfile-maven-plugin.version>
         <jmockit.version>1.49</jmockit.version>
         <easymock.version>4.3</easymock.version>
+        <powermock.version>1.6.3</powermock.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -442,6 +443,18 @@
                 <groupId>org.spockframework</groupId>
                 <artifactId>spock-core</artifactId>
                 <version>2.3-groovy-4.0</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>2.4.21</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
                 <scope>test</scope>
             </dependency>
 
@@ -830,6 +843,16 @@
                 <version>1.0.1.RELEASE</version>
             </dependency>
             <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.13</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>4.2.5</version>
+            </dependency>
+            <dependency>
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
                 <version>2.3.3</version>
@@ -884,6 +907,18 @@
                 <version>${easymock.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>            
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
