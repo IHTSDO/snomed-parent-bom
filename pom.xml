@@ -795,7 +795,7 @@
             <dependency>
                 <groupId>net.rcarz</groupId>
                 <artifactId>jira-client</artifactId>
-                <version>0.6.4-IHTSDO</version>
+                <version>1.0.0-IHTSDO</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
