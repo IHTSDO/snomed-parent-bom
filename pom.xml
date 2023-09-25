@@ -119,6 +119,7 @@
         <jmockit.version>1.49</jmockit.version>
         <easymock.version>4.3</easymock.version>
         <powermock.version>1.6.3</powermock.version>
+        <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -855,6 +856,11 @@
                 <groupId>org.ihtsdo.snomed.util</groupId>
                 <artifactId>snomed-utilities</artifactId>
                 <version>${snomed-utilities.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>${jakarta-servlet-api.version}</version>
             </dependency>
 
             <!-- Liquibase -->
