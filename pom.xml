@@ -66,7 +66,7 @@
         <snomed-scg-parser.version>3.0.0</snomed-scg-parser.version>
         <snomed-query-service.version>4.1.0-SNAPSHOT</snomed-query-service.version>
         <cis-client.version>1.0.0</cis-client.version>
-        <spellcheck-core.version>2.0.0</spellcheck-core.version>
+        <spellcheck-core.version>2.1.0-SNAPSHOT</spellcheck-core.version>
 
         <!--
         Current Elasticsearch _Server_ version supported by AWS is 7.10.0
