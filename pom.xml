@@ -120,6 +120,7 @@
         <easymock.version>4.3</easymock.version>
         <powermock.version>1.6.3</powermock.version>
         <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
+        <branch-path-uri-rewrite-filter.version>5.0.0-SNAPSHOT</branch-path-uri-rewrite-filter.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -703,7 +704,7 @@
             <dependency>
                 <groupId>io.kaicode</groupId>
                 <artifactId>branch-path-uri-rewrite-filter</artifactId>
-                <version>4.0.0</version>
+                <version>${branch-path-uri-rewrite-filter.version}</version>
             </dependency>
             <dependency>
                 <groupId>net.jodah</groupId>
