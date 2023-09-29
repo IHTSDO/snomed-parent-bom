@@ -60,7 +60,7 @@
         <snomed-drools.version>4.0.0</snomed-drools.version>
         <snomed-owl-toolkit.version>4.1.0-SNAPSHOT</snomed-owl-toolkit.version>
         <snomed-utilities.version>2.1.0-SNAPSHOT</snomed-utilities.version>
-        <snomed-template-parser.version>3.0.0</snomed-template-parser.version>
+        <snomed-template-parser.version>3.1.0-SNAPSHOT</snomed-template-parser.version>
         <snomed-ecl-parser.version>3.0.0</snomed-ecl-parser.version>
         <mrcm-validator.version>2.1.0-SNAPSHOT</mrcm-validator.version>
         <snomed-scg-parser.version>3.0.0</snomed-scg-parser.version>
