@@ -121,6 +121,7 @@
         <powermock.version>1.6.3</powermock.version>
         <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
         <branch-path-uri-rewrite-filter.version>5.0.0-SNAPSHOT</branch-path-uri-rewrite-filter.version>
+        <software-amazon-awssdk.version>2.20.156</software-amazon-awssdk.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -285,6 +286,16 @@
                 <artifactId>aws-java-sdk-core</artifactId>
                 <version>${aws-java-sdk.version}</version>
                 <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>regions</artifactId>
+                <version>${software-amazon-awssdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>auth</artifactId>
+                <version>${software-amazon-awssdk.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
