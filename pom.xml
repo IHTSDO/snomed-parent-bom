@@ -408,6 +408,12 @@
                 <artifactId>springdoc-openapi-ui</artifactId>
                 <version>1.7.0</version>
             </dependency>
+            <!-- Spring Boot 3 requires different Spring Doc dependency -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>2.2.0</version>
+            </dependency>
 
             <!-- _____         _
                 |_   _|__  ___| |_
