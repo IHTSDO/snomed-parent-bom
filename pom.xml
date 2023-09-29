@@ -59,7 +59,7 @@
         <snomed-boot.version>5.0.0</snomed-boot.version>
         <snomed-drools.version>4.0.0</snomed-drools.version>
         <snomed-owl-toolkit.version>4.1.0-SNAPSHOT</snomed-owl-toolkit.version>
-        <snomed-utilities.version>2.0.0</snomed-utilities.version>
+        <snomed-utilities.version>2.1.0-SNAPSHOT</snomed-utilities.version>
         <snomed-template-parser.version>3.0.0</snomed-template-parser.version>
         <snomed-ecl-parser.version>3.0.0</snomed-ecl-parser.version>
         <mrcm-validator.version>2.1.0-SNAPSHOT</mrcm-validator.version>
@@ -212,7 +212,7 @@
                 <exclusions>
                     <exclusion>
                         <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
+                        <artifactId>slf4j-reload4j</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -382,7 +382,7 @@
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
+                <artifactId>slf4j-reload4j</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
 
