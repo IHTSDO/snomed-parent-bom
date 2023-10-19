@@ -88,12 +88,13 @@
 
         <spring.version>6.0.12</spring.version>
         <spring-boot.version>3.1.4</spring-boot.version>
+        <tomcat.version>10.1.15</tomcat.version>
         <spring.security.version>6.1.4</spring.security.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
-        <spring-cloud-aws-version>2.4.4</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
+        <spring-cloud-aws-version>3.0.2</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
         <spring-cloud-starter-consul.version>4.0.3</spring-cloud-starter-consul.version>
         <spring-cloud-starter-vault.version>4.0.1</spring-cloud-starter-vault.version>
-        <aws-java-sdk.version>1.12.486</aws-java-sdk.version>
+        <aws-java-sdk.version>2.21.2</aws-java-sdk.version>
         <drools.version>8.37.0.Final</drools.version>
         <drools-dynamic.version>7.74.0.Final</drools-dynamic.version>
         <activemq.version>5.18.2</activemq.version>
@@ -103,7 +104,7 @@
         <jackson.version>2.15.2</jackson.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <jdeb-plugin.version>1.10</jdeb-plugin.version>
-        <json.version>20230227</json.version>
+        <json.version>20231013</json.version>
         <log4j.version>2.17.2</log4j.version>
         <slf4j.version>2.0.9</slf4j.version>
         <snakeyaml.version>2.0</snakeyaml.version>
@@ -122,7 +123,6 @@
         <powermock.version>1.6.3</powermock.version>
         <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
         <branch-path-uri-rewrite-filter.version>5.0.0-SNAPSHOT</branch-path-uri-rewrite-filter.version>
-        <software-amazon-awssdk.version>2.20.156</software-amazon-awssdk.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -250,6 +250,22 @@
                  ___) | |_) | |  | | | | | (_| | | |_) | (_) | (_) | |_
                 |____/| .__/|_|  |_|_| |_|\__, | |____/ \___/ \___/ \__|
                       |_|                 |___/ -->
+
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-el</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-websocket</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -271,32 +287,39 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <dependency>
-                <groupId>io.awspring.cloud</groupId>
-                <artifactId>spring-cloud-aws-autoconfigure</artifactId>
-                <version>${spring-cloud-aws-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.awspring.cloud</groupId>
-                <artifactId>spring-cloud-aws-core</artifactId>
-                <version>${spring-cloud-aws-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-core</artifactId>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>bom</artifactId>
                 <version>${aws-java-sdk.version}</version>
-                <scope>compile</scope>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>software.amazon.awssdk</groupId>
-                <artifactId>regions</artifactId>
-                <version>${software-amazon-awssdk.version}</version>
+                <artifactId>s3</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>software.amazon.awssdk</groupId>
+                        <artifactId>netty-nio-client</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
-                <groupId>software.amazon.awssdk</groupId>
-                <artifactId>auth</artifactId>
-                <version>${software-amazon-awssdk.version}</version>
+                <groupId>io.awspring.cloud</groupId>
+                <artifactId>spring-cloud-aws-dependencies</artifactId>
+                <version>${spring-cloud-aws-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.awspring.cloud</groupId>
+                <artifactId>spring-cloud-aws-starter</artifactId>
+                <version>${spring-cloud-aws-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.awspring.cloud</groupId>
+                <artifactId>spring-cloud-aws-starter-s3</artifactId>
+                <version>${spring-cloud-aws-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -796,11 +819,6 @@
                 <version>1.10.0</version>
             </dependency>
             <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk</artifactId>
-                <version>1.12.486</version>
-            </dependency>
-            <dependency>
                 <groupId>com.github.awslabs</groupId>
                 <artifactId>aws-request-signing-apache-interceptor</artifactId>
                 <version>f39dfaf107</version>
@@ -845,11 +863,6 @@
                 <artifactId>jaxb-impl</artifactId>
                 <version>2.3.3</version>
                 <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-aws-context</artifactId>
-                <version>${spring-cloud-aws-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.ihtsdo.snomed.util</groupId>
