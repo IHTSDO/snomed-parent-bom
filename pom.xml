@@ -57,7 +57,7 @@
         <ihtsdo-spring-sso.version>5.0.0-SNAPSHOT</ihtsdo-spring-sso.version>
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
         <snomed-boot.version>5.0.0</snomed-boot.version>
-        <snomed-drools.version>4.0.0</snomed-drools.version>
+        <snomed-drools.version>4.1.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>4.1.0-SNAPSHOT</snomed-owl-toolkit.version>
         <snomed-utilities.version>2.1.0-SNAPSHOT</snomed-utilities.version>
         <snomed-template-parser.version>3.1.0-SNAPSHOT</snomed-template-parser.version>
@@ -167,6 +167,21 @@
                 <version>${snomed-drools.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.ihtsdo.drools</groupId>
+                <artifactId>snomed-drools-rf2-validator</artifactId>
+                <version>${snomed-drools.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.collections</groupId>
+                        <artifactId>google-collections</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.snomed.otf</groupId>
+                        <artifactId>snomed-boot</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
                 <groupId>org.ihtsdo.otf</groupId>
                 <artifactId>ihtsdo-spring-sso</artifactId>
                 <version>${ihtsdo-spring-sso.version}</version>
@@ -227,21 +242,6 @@
                 <groupId>org.ihtsdo.otf</groupId>
                 <artifactId>snomed-query-service</artifactId>
                 <version>${snomed-query-service.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ihtsdo.drools</groupId>
-                <artifactId>snomed-drools-rf2-validator</artifactId>
-                <version>${snomed-drools.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.google.collections</groupId>
-                        <artifactId>google-collections</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.snomed.otf</groupId>
-                        <artifactId>snomed-boot</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <!-- ____             _               ____              _
