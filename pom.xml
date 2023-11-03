@@ -86,9 +86,8 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
 
-        <spring.version>6.0.12</spring.version>
-        <spring-boot.version>3.1.4</spring-boot.version>
-        <tomcat.version>10.1.15</tomcat.version>
+        <spring.version>6.0.13</spring.version>
+        <spring-boot.version>3.1.5</spring-boot.version>
         <spring.security.version>6.1.4</spring.security.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
         <spring-cloud-aws-version>3.0.2</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
@@ -251,21 +250,6 @@
                 |____/| .__/|_|  |_|_| |_|\__, | |____/ \___/ \___/ \__|
                       |_|                 |___/ -->
 
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-core</artifactId>
-                <version>${tomcat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-el</artifactId>
-                <version>${tomcat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-websocket</artifactId>
-                <version>${tomcat.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
