@@ -1087,6 +1087,7 @@
                     <configuration>
                         <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
+                        <parameters>true</parameters>
                     </configuration>
                     <version>${maven-compiler-plugin.version}</version>
                 </plugin>
