@@ -74,7 +74,7 @@
         -->
         <elasticsearch.version>8.7.1</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
         <elasticvc.version>5.0.0-SNAPSHOT</elasticvc.version>
-        <spring-data-elasticsearch.version>5.1.4</spring-data-elasticsearch.version>
+        <spring-data-elasticsearch.version>5.1.6</spring-data-elasticsearch.version>
         <lucene.version>9.5.0</lucene.version>
         <lucene-analyzers-common.version>8.11.2</lucene-analyzers-common.version>
         <hapi-fhir.version>6.9.6-SNAPSHOT</hapi-fhir.version>
@@ -86,8 +86,8 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
 
-        <spring.version>6.0.13</spring.version>
-        <spring-boot.version>3.1.5</spring-boot.version>
+        <spring.version>6.0.14</spring.version>
+        <spring-boot.version>3.1.6</spring-boot.version>
         <spring.security.version>6.1.4</spring.security.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
         <spring-cloud-aws-version>3.0.2</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
@@ -212,12 +212,17 @@
                 <version>${ihtsdo-resty.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.eclipse.parsson</groupId>
+                <artifactId>parsson</artifactId>
+                <version>1.1.5</version>
+            </dependency>
+            <dependency>
                 <groupId>io.kaicode</groupId>
                 <artifactId>elasticvc</artifactId>
                 <version>${elasticvc.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.elasticsearch</groupId>
+                <groupId>co.elastic.clients</groupId>
                 <artifactId>elasticsearch-java</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
