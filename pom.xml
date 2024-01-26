@@ -124,6 +124,7 @@
         <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
         <branch-path-uri-rewrite-filter.version>5.0.0</branch-path-uri-rewrite-filter.version>
         <mockito.version>5.8.0</mockito.version>
+        <localstack.version>1.19.3</localstack.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -1043,6 +1044,12 @@
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
                 <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>localstack</artifactId>
+                <version>${localstack.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
