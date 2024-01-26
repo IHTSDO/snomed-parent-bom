@@ -123,6 +123,7 @@
         <powermock.version>1.6.3</powermock.version>
         <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
         <branch-path-uri-rewrite-filter.version>5.0.0</branch-path-uri-rewrite-filter.version>
+        <mockito.version>5.8.0</mockito.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -1037,6 +1038,12 @@
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-context</artifactId>
                 <version>1.60.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
