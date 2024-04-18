@@ -144,6 +144,107 @@
     </dependencies>
     <dependencyManagement>
         <dependencies>
+
+            <!-- ____             _
+                / ___| _ __  _ __(_)_ __   __ _
+                \___ \| '_ \| '__| | '_ \ / _` |
+                 ___) | |_) | |  | | | | | (_| |
+                |____/| .__/|_|  |_|_| |_|\__, |
+                      | |                 |___/ -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>bom</artifactId>
+                <version>${aws-java-sdk.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>software.amazon.awssdk</groupId>
+                <artifactId>s3</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>software.amazon.awssdk</groupId>
+                        <artifactId>netty-nio-client</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>io.awspring.cloud</groupId>
+                <artifactId>spring-cloud-aws-dependencies</artifactId>
+                <version>${spring-cloud-aws-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.awspring.cloud</groupId>
+                <artifactId>spring-cloud-aws-starter</artifactId>
+                <version>${spring-cloud-aws-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.awspring.cloud</groupId>
+                <artifactId>spring-cloud-aws-starter-s3</artifactId>
+                <version>${spring-cloud-aws-version}</version>
+            </dependency>
+            <!-- spring-web tomcat override -->
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>${tomcat-embed.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-websocket</artifactId>
+                <version>${tomcat-embed.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-crypto</artifactId>
+                <version>${spring.security.version}</version>
+            </dependency>
+
+            <!-- ____             _               ____              _
+                / ___| _ __  _ __(_)_ __   __ _  | __ )  ___   ___ | |_
+                \___ \| '_ \| '__| | '_ \ / _` | |  _ \ / _ \ / _ \| __|
+                 ___) | |_) | |  | | | | | (_| | | |_) | (_) | (_) | |_
+                |____/| .__/|_|  |_|_| |_|\__, | |____/ \___/ \___/ \__|
+                      |_|                 |___/ -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- ____                                 _
                 / ___| _ __   ___  _ __ ___   ___  __| |
                 \___ \| '_ \ / _ \| '_ ` _ \ / _ \/ _` |
@@ -250,172 +351,6 @@
                 <groupId>org.ihtsdo.otf</groupId>
                 <artifactId>snomed-query-service</artifactId>
                 <version>${snomed-query-service.version}</version>
-            </dependency>
-
-            <!-- ____             _               ____              _
-                / ___| _ __  _ __(_)_ __   __ _  | __ )  ___   ___ | |_
-                \___ \| '_ \| '__| | '_ \ / _` | |  _ \ / _ \ / _ \| __|
-                 ___) | |_) | |  | | | | | (_| | | |_) | (_) | (_) | |_
-                |____/| .__/|_|  |_|_| |_|\__, | |____/ \___/ \___/ \__|
-                      |_|                 |___/ -->
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <!-- ____             _
-                / ___| _ __  _ __(_)_ __   __ _
-                \___ \| '_ \| '__| | '_ \ / _` |
-                 ___) | |_) | |  | | | | | (_| |
-                |____/| .__/|_|  |_|_| |_|\__, |
-                      | |                 |___/ -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>${spring.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>software.amazon.awssdk</groupId>
-                <artifactId>bom</artifactId>
-                <version>${aws-java-sdk.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>software.amazon.awssdk</groupId>
-                <artifactId>s3</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <groupId>software.amazon.awssdk</groupId>
-                        <artifactId>netty-nio-client</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>io.awspring.cloud</groupId>
-                <artifactId>spring-cloud-aws-dependencies</artifactId>
-                <version>${spring-cloud-aws-version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.awspring.cloud</groupId>
-                <artifactId>spring-cloud-aws-starter</artifactId>
-                <version>${spring-cloud-aws-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.awspring.cloud</groupId>
-                <artifactId>spring-cloud-aws-starter-s3</artifactId>
-                <version>${spring-cloud-aws-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-aop</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-tx</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jcl</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jms</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-messaging</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context-support</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-orm</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-core</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <!-- spring-web tomcat override -->
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-core</artifactId>
-                <version>${tomcat-embed.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-websocket</artifactId>
-                <version>${tomcat-embed.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-expression</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-webmvc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-beans</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-config</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-web</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-core</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-crypto</artifactId>
-                <version>${spring.security.version}</version>
             </dependency>
 
             <!-- _                      _
@@ -1118,11 +1053,6 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-actuator</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>7.0.5.Final</version>
@@ -1197,6 +1127,7 @@
                 <artifactId>bcprov-jdk18on</artifactId>
                 <version>1.78</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
