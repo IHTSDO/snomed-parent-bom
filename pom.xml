@@ -86,13 +86,13 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
 
-        <spring.version>6.1.2</spring.version>
+        <spring.version>6.1.6</spring.version>
         <spring-boot.version>3.2.1</spring-boot.version>
-        <spring.security.version>6.1.4</spring.security.version>
+        <spring.security.version>6.1.8</spring.security.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
         <spring-cloud-aws-version>3.0.2</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
-        <spring-cloud-starter-consul.version>4.0.3</spring-cloud-starter-consul.version>
-        <spring-cloud-starter-vault.version>4.0.1</spring-cloud-starter-vault.version>
+        <spring-cloud-starter-consul.version>4.0.4</spring-cloud-starter-consul.version>
+        <spring-cloud-starter-vault.version>4.0.2</spring-cloud-starter-vault.version>
         <aws-java-sdk.version>2.21.2</aws-java-sdk.version>
         <drools.version>8.37.0.Final</drools.version>
         <drools-dynamic.version>7.74.0.Final</drools-dynamic.version>
