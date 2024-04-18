@@ -75,8 +75,8 @@
         <elasticsearch.version>8.11.1</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
         <elasticvc.version>6.0.0</elasticvc.version>
         <spring-data-elasticsearch.version>5.2.1</spring-data-elasticsearch.version>
-        <lucene.version>9.5.0</lucene.version>
-        <lucene-analyzers-common.version>8.11.2</lucene-analyzers-common.version>
+        <lucene.version>9.9.2</lucene.version>
+        <lucene-analyzers-common.version>8.11.3</lucene-analyzers-common.version>
         <hapi-fhir.version>6.9.6</hapi-fhir.version>
         <docker.image.prefix>snomedinternational</docker.image.prefix>
 
@@ -894,6 +894,11 @@
                 <artifactId>liquibase-core</artifactId>
                 <version>4.23.1</version>
             </dependency>
+            <dependency>
+                <groupId>org.liquibase.ext</groupId>
+                <artifactId>liquibase-hibernate6</artifactId>
+                <version>4.23.1</version>
+            </dependency>
 
             <!-- H2 -->
             <dependency>
@@ -1102,6 +1107,19 @@
                 <artifactId>hibernate-search-backend-lucene</artifactId>
                 <version>7.1.0.Final</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-jcache</artifactId>
+                <version>6.4.4.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>3.10.8</version>
+                <scope>runtime</scope>
+            </dependency>
+
             <dependency>
                 <groupId>com.ryantenney.metrics</groupId>
                 <artifactId>metrics-spring</artifactId>
