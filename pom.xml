@@ -77,7 +77,7 @@
         <spring-data-elasticsearch.version>5.2.1</spring-data-elasticsearch.version>
         <lucene.version>9.9.2</lucene.version>
         <lucene-analyzers-common.version>8.11.3</lucene-analyzers-common.version>
-        <hapi-fhir.version>6.9.6</hapi-fhir.version>
+        <hapi-fhir.version>7.0.2</hapi-fhir.version>
         <docker.image.prefix>snomedinternational</docker.image.prefix>
 
         <!--__     __            _
@@ -755,22 +755,22 @@
                 <version>${testcontainers.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.snomed.fhir</groupId>
+                <groupId>ca.uhn.hapi.fhir</groupId>
                 <artifactId>hapi-fhir-structures-r4</artifactId>
                 <version>${hapi-fhir.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.snomed.fhir</groupId>
+                <groupId>ca.uhn.hapi.fhir</groupId>
                 <artifactId>hapi-fhir-server</artifactId>
                 <version>${hapi-fhir.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.snomed.fhir</groupId>
+                <groupId>ca.uhn.hapi.fhir</groupId>
                 <artifactId>hapi-fhir-jpaserver-model</artifactId>
                 <version>${hapi-fhir.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.snomed.fhir</groupId>
+                <groupId>ca.uhn.hapi.fhir</groupId>
                 <artifactId>hapi-fhir-jpaserver-base</artifactId>
                 <version>${hapi-fhir.version}</version>
             </dependency>
