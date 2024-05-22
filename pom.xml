@@ -1128,7 +1128,57 @@
                 <artifactId>bcprov-jdk18on</artifactId>
                 <version>1.78</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.github.jknack</groupId>
+                <artifactId>handlebars-springmvc</artifactId>
+                <version>4.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jknack</groupId>
+                <artifactId>handlebars-guava-cache</artifactId>
+                <version>4.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jknack</groupId>
+                <artifactId>handlebars-jackson2</artifactId>
+                <version>4.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jknack</groupId>
+                <artifactId>handlebars</artifactId>
+                <version>4.4.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <scope>provided</scope>
+                <version>1.18.32</version>
+            </dependency>
+            <dependency>
+                <groupId>com.atlassian.crowd</groupId>
+                <artifactId>crowd-integration-client-rest</artifactId>
+                <version>5.3.0-QR20240130120105</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-core</artifactId>
+                <version>1.12.717</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.xml.bind</groupId>
+                <artifactId>jakarta.xml.bind-api</artifactId>
+                <version>4.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>4.0.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>4.0.5</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
