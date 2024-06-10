@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>3.5.0</version>
+    <version>3.5.1</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -58,11 +58,11 @@
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
         <snomed-boot.version>5.0.0</snomed-boot.version>
         <snomed-drools.version>5.2.0</snomed-drools.version>
-        <snomed-owl-toolkit.version>5.4.0-SNAPSHOT</snomed-owl-toolkit.version>
+        <snomed-owl-toolkit.version>5.4.0</snomed-owl-toolkit.version>
         <snomed-utilities.version>2.1.0</snomed-utilities.version>
         <snomed-template-parser.version>4.0.0</snomed-template-parser.version>
         <snomed-ecl-parser.version>3.0.0</snomed-ecl-parser.version>
-        <mrcm-validator.version>3.4.0-SNAPSHOT</mrcm-validator.version>
+        <mrcm-validator.version>3.4.0</mrcm-validator.version>
         <snomed-scg-parser.version>3.0.0</snomed-scg-parser.version>
         <snomed-query-service.version>5.1.0</snomed-query-service.version>
         <cis-client.version>2.1.0</cis-client.version>
