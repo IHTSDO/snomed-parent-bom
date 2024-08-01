@@ -1,6 +1,19 @@
+# Contents
+
+<!-- TOC -->
+* [Contents](#contents)
+* [Maven BOM project for snomed projects](#maven-bom-project-for-snomed-projects)
+* [Instructions](#instructions)
+  * [Option 1) UPDATE VERSION: If there is a fixed version available from the jar/lib supplier.](#option-1-update-version-if-there-is-a-fixed-version-available-from-the-jarlib-supplier)
+  * [Option 2) IGNORE CVE: If we wish to ignore the CVE, for whatever reason follow these steps:](#option-2-ignore-cve-if-we-wish-to-ignore-the-cve-for-whatever-reason-follow-these-steps)
+  * [Option 3) Exclude the library from the dependency](#option-3-exclude-the-library-from-the-dependency)
+* [Useful Maven links:](#useful-maven-links)
+* [Useful Maven commands:](#useful-maven-commands)
+<!-- TOC -->
+
 # Maven BOM project for snomed projects
-- Snomed master Parent BOM project, to centralise and control dependencies more conveniently
-- For OWASP suppressions see the [snomed-parent-owasp](https://github.com/IHTSDO/snomed-parent-owasp) project.
+- Snomed master Parent BOM project, to centralise and control dependencies more conveniently.
+- For OWASP suppressions, see [Ignore CVE section](#option-2-ignore-cve-if-we-wish-to-ignore-the-cve-for-whatever-reason-follow-these-steps), below.
 - Remember to update the version in the [pom.xml](pom.xml) with each release.
 
 # Instructions
@@ -11,7 +24,7 @@ When a project fails to build due to a CVE there are at least 3 options:
 2. An updated version of the library is NOT available.
     - We then have two options:
       - Wait for one to be created, most supported products issue a fix within hours or a few days.
-      - Ignore the CVE, See IGNORE CVE section, below.
+      - Ignore the CVE, see [Ignore CVE section](#option-2-ignore-cve-if-we-wish-to-ignore-the-cve-for-whatever-reason-follow-these-steps), below.
 3. Exclude the library from the dependency.
 
 Here are the instructions for each in turn:
@@ -32,7 +45,7 @@ In detail:
   - Include link to relevant CVE resolution, for example: https://spring.io/security/cve-2023-20862
 * Update the `pom.xml` in this BOM project with the new fix version, here are the XPATHS for the sections you will most likely update:
 
-```
+```text
 /project/properties
 /project/dependencyManagement/dependencies
 ```
@@ -40,7 +53,7 @@ In detail:
   - You may need to explicitly specify the module, but mostly it's just a version number change.
   - Update the bom version, here is its XPATH:
 
-```
+```text
 /project/version
 ```
 
@@ -55,20 +68,12 @@ In detail:
 ## Option 2) IGNORE CVE: If we wish to ignore the CVE, for whatever reason follow these steps:
 
 In summary, you will be updating 3 projects:
+
 * Add exception to [snomed-parent-owasp](https://github.com/IHTSDO/snomed-parent-owasp)
 * Update version of the OWASP in [snomed-parent-bom](https://github.com/IHTSDO/snomed-parent-bom)
 * Update failing project to use the new bom.
 
-Here are the detailed instructions:
-
-* Run OWASP Maven goal locally, it should fail: `mvn dependency-check:check`
-* However this will have generated a report in the target folder of the project: [target/dependency-check-report.html](target/dependency-check-report.html)
-* Open this report and find the CVE you wish to suppress, next to the CVE id there is a supress button.  When clicked you will see an XML snippet, copy this snippet.
-* Update the [snomed-parent-owasp](https://github.com/IHTSDO/snomed-parent-owasp) project.
-  * Find the `owasp-supressions.xml` and paste the XML snippet at the end after the last suppression.
-  * Update the OWASP project version, xpath is `/project/version`
-* Update BOM version, to use the new OWASP version, xpath in the bom project is `/project/properties/snomed-parent-owasp.version`
-* Update affected project, to use the new BOM version.
+Detailed instructions are in the [snomed-parent-owasp](https://github.com/IHTSDO/snomed-parent-owasp) project.
 
 ## Option 3) Exclude the library from the dependency
 If you do not need the library at all, either do not include it in your `pom.xml`, or if it is from a third party exclude it as follows:
@@ -99,33 +104,48 @@ Note many of the following have corresponding tooling in JetBrains.
 
 * Push project to local repository, for testing locally:
 
-`mvn install`
+```shell
+mvn install
+```
 
 * Generates a dependency tree of the project:
 
-`mvn dependency:tree`
+```shell
+mvn dependency:tree
+```
 
 * Display possible updates:
 
-`mvn versions:display-dependency-updates`
+```shell
+mvn versions:display-dependency-updates
+```
 
 * Searches POM for all -SNAPSHOT versions which have been released and replaces them with the corresponding release version:
 
-`mvn versions:use-releases`
+```shell
+mvn versions:use-releases
+```
 
 * Searches POM updates with next version (move every non-SNAPSHOT dependency to its latest release):
 
-`mvn versions:use-next-releases`
+```shell
+mvn versions:use-next-releases
+```
 
 * Searches POM updates with latest version (move every non-SNAPSHOT dependency to its latest release):
 
-`mvn versions:use-latest-versions`
+```shell
+mvn versions:use-latest-versions
+```
 
 * Searches POM updates with latest version:
 
-`mvn versions:update-properties`
+```shell
+mvn versions:update-properties
+```
 
 * CVE analysis and report:
 
-`mvn dependency-check:check`
-
+```shell
+mvn dependency-check:check
+```
