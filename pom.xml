@@ -57,7 +57,7 @@
         <ihtsdo-spring-sso.version>5.1.0</ihtsdo-spring-sso.version>
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
         <snomed-boot.version>5.0.0</snomed-boot.version>
-        <snomed-drools.version>5.3.1</snomed-drools.version>
+        <snomed-drools.version>5.4.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>5.4.0</snomed-owl-toolkit.version>
         <snomed-utilities.version>2.1.0</snomed-utilities.version>
         <snomed-template-parser.version>4.0.0</snomed-template-parser.version>
