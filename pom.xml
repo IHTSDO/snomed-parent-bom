@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>3.6.2</version>
+    <version>3.6.3</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -52,7 +52,7 @@
             \___ \| '_ \ / _ \| '_ ` _ \ / _ \/ _` |
              ___) | | | | (_) | | | | | |  __/ (_| |
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
-        <snomed-parent-owasp.version>1.0.3</snomed-parent-owasp.version>
+        <snomed-parent-owasp.version>1.0.4</snomed-parent-owasp.version>
         <otf-common.version>7.4.1</otf-common.version>
         <ihtsdo-spring-sso.version>5.1.0</ihtsdo-spring-sso.version>
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
@@ -75,9 +75,9 @@
         <elasticsearch.version>8.11.1</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
         <elasticvc.version>6.0.0</elasticvc.version>
         <spring-data-elasticsearch.version>5.2.1</spring-data-elasticsearch.version>
-        <lucene.version>9.9.2</lucene.version>
-        <lucene-analyzers-common.version>8.11.3</lucene-analyzers-common.version>
-        <hapi-fhir.version>7.0.2</hapi-fhir.version>
+        <lucene.version>9.12.0</lucene.version>
+        <lucene-analyzers-common.version>8.11.4</lucene-analyzers-common.version>
+        <hapi-fhir.version>7.4.0</hapi-fhir.version>
         <docker.image.prefix>snomedinternational</docker.image.prefix>
 
         <!--__     __            _
@@ -86,7 +86,7 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
 
-        <spring.version>6.1.6</spring.version>
+        <spring.version>6.1.12</spring.version>
         <spring-boot.version>3.2.1</spring-boot.version>
         <spring.security.version>6.1.8</spring.security.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
@@ -400,13 +400,13 @@
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>
-                <version>1.7.0</version>
+                <version>1.8.0</version>
             </dependency>
             <!-- Spring Boot 3 requires different Spring Doc dependency -->
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-                <version>2.5.0</version>
+                <version>2.6.0</version>
             </dependency>
 
             <!-- _____         _
@@ -802,16 +802,54 @@
                 <version>2.3.1</version>
             </dependency>
 
+            <!-- override hapi-fhir dependencies (CVE) -->
+            <!-- Following can be removed when future release of hapi-fhir is updated -->
             <dependency>
                 <groupId>org.apache.jena</groupId>
                 <artifactId>jena-core</artifactId>
-                <version>4.9.0</version>
+                <version>5.1.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.jena</groupId>
                 <artifactId>jena-arq</artifactId>
-                <version>4.9.0</version>
+                <version>5.1.0</version>
             </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>4.28.2</version>
+            </dependency>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>org.hl7.fhir.r4</artifactId>
+                <version>6.3.27</version>
+            </dependency>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>org.hl7.fhir.r5</artifactId>
+                <version>6.3.27</version>
+            </dependency>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>org.hl7.fhir.r4b</artifactId>
+                <version>6.3.27</version>
+            </dependency>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>org.hl7.fhir.dstu3</artifactId>
+                <version>6.3.27</version>
+            </dependency>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>org.hl7.fhir.dstu2016may</artifactId>
+                <version>6.3.27</version>
+            </dependency>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>org.hl7.fhir.utilities</artifactId>
+                <version>6.3.27</version>
+            </dependency>
+            <!-- end of override hapi-fhir dependencies (CVE) -->
             <dependency>
                 <groupId>org.thymeleaf</groupId>
                 <artifactId>thymeleaf</artifactId>
