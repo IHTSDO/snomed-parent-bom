@@ -269,6 +269,12 @@
                 <groupId>org.ihtsdo.otf.common</groupId>
                 <artifactId>otf-common</artifactId>
                 <version>${otf-common.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-webmvc</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.ihtsdo.otf.common</groupId>
