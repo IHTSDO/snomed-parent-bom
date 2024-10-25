@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>3.7.0</version>
+    <version>3.7.1</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -56,8 +56,8 @@
         <otf-common.version>7.5.0</otf-common.version>
         <ihtsdo-spring-sso.version>5.2.0</ihtsdo-spring-sso.version>
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
-        <snomed-boot.version>5.3.0-SNAPSHOT</snomed-boot.version>
-        <snomed-drools.version>5.5.0-SNAPSHOT</snomed-drools.version>
+        <snomed-boot.version>5.2.1</snomed-boot.version>
+        <snomed-drools.version>5.4.1</snomed-drools.version>
         <snomed-owl-toolkit.version>5.4.0</snomed-owl-toolkit.version>
         <snomed-utilities.version>2.1.0</snomed-utilities.version>
         <snomed-template-parser.version>4.1.0</snomed-template-parser.version>
