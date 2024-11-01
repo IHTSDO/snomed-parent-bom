@@ -90,6 +90,7 @@
         <spring.version>6.1.12</spring.version>
         <spring-boot.version>3.2.1</spring-boot.version>
         <spring.security.version>6.1.8</spring.security.version>
+        <spring-webmvc.version>6.1.14</spring-webmvc.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
         <spring-cloud-aws-version>3.0.2</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
         <spring-cloud-starter-consul.version>4.1.1</spring-cloud-starter-consul.version>
@@ -159,6 +160,11 @@
                 <version>${spring.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring-webmvc.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -269,12 +275,6 @@
                 <groupId>org.ihtsdo.otf.common</groupId>
                 <artifactId>otf-common</artifactId>
                 <version>${otf-common.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring-webmvc</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.ihtsdo.otf.common</groupId>
