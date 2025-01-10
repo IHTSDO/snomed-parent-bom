@@ -59,7 +59,7 @@
         <snomed-boot.version>5.3.0-SNAPSHOT</snomed-boot.version>
         <snomed-drools.version>5.5.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>5.5.0-SNAPSHOT</snomed-owl-toolkit.version>
-        <snomed-utilities.version>2.1.0</snomed-utilities.version>
+        <snomed-utilities.version>2.2.0-SNAPSHOT</snomed-utilities.version>
         <snomed-template-parser.version>4.1.0</snomed-template-parser.version>
         <snomed-ecl-parser.version>3.1.1</snomed-ecl-parser.version>
         <mrcm-validator.version>3.7.0-SNAPSHOT</mrcm-validator.version>
