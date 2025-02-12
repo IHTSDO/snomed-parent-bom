@@ -99,7 +99,7 @@
         <aws-java-sdk.version>2.21.2</aws-java-sdk.version>
         <drools.version>8.37.0.Final</drools.version>
         <drools-dynamic.version>7.74.0.Final</drools-dynamic.version>
-        <activemq.version>6.0.1</activemq.version>
+        <activemq.version>6.1.5</activemq.version>
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
         <dependency-check-maven.version>8.3.1</dependency-check-maven.version>
         <gson.version>2.10.1</gson.version>
