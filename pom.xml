@@ -63,7 +63,7 @@
         <snomed-template-parser.version>4.2.0</snomed-template-parser.version>
         <snomed-ecl-parser.version>3.1.1</snomed-ecl-parser.version>
         <mrcm-validator.version>3.8.1</mrcm-validator.version>
-        <snomed-scg-parser.version>3.0.0</snomed-scg-parser.version>
+        <snomed-scg-parser.version>3.1.0-SNAPSHOT</snomed-scg-parser.version>
         <snomed-query-service.version>5.4.1</snomed-query-service.version>
         <cis-client.version>2.1.0</cis-client.version>
         <spellcheck-core.version>3.5.1</spellcheck-core.version>
