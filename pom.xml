@@ -87,7 +87,7 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
 
-        <spring.version>6.1.12</spring.version>
+        <spring.version>6.1.21</spring.version>
         <spring-boot.version>3.2.1</spring-boot.version>
         <spring.security.version>6.3.8</spring.security.version>
         <spring-webmvc.version>6.1.14</spring-webmvc.version>
