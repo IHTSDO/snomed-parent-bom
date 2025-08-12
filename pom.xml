@@ -869,6 +869,11 @@
                 <artifactId>grpc-api</artifactId>
                 <version>1.74.0</version>
             </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-context</artifactId>
+                <version>1.74.0</version>
+            </dependency>
             <!-- override hapi-fhir dependencies (CVE) -->
             <!-- Following can be removed when future release of hapi-fhir is updated -->
             <dependency>
