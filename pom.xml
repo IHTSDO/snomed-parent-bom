@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>3.11.1-SNAPSHOT</version>
+    <version>3.11.1</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -53,7 +53,7 @@
              ___) | | | | (_) | | | | | |  __/ (_| |
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
         <snomed-parent-owasp.version>1.0.6</snomed-parent-owasp.version>
-        <otf-common.version>7.8.1-SNAPSHOT</otf-common.version>
+        <otf-common.version>7.8.1</otf-common.version>
         <ihtsdo-spring-sso.version>5.4.1</ihtsdo-spring-sso.version>
         <ihtsdo-resty.version>0.3.4.2</ihtsdo-resty.version>
         <snomed-boot.version>5.3.0</snomed-boot.version>
