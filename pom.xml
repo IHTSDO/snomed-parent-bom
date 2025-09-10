@@ -91,8 +91,6 @@
         <spring.version>6.1.21</spring.version>
         <spring-boot.version>3.2.1</spring-boot.version>
         <spring.security.version>6.3.8</spring.security.version>
-        <spring-webmvc.version>6.1.14</spring-webmvc.version>
-        <spring-webflux.version>6.1.14</spring-webflux.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
         <spring-cloud-aws-version>3.0.2</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
         <spring-cloud-starter-consul.version>4.1.1</spring-cloud-starter-consul.version>
@@ -172,13 +170,18 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
-                <version>${spring-webmvc.version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webflux</artifactId>
-                <version>${spring-webflux.version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
