@@ -119,7 +119,7 @@
         <joda-time.version>2.12.4</joda-time.version>
         <owlapi.version>4.1.3</owlapi.version> <!-- Note 4.5.9 or later needed for Java 16+, but OWLAPI will need thorough testing! -->
         <testcontainers.version>1.19.0</testcontainers.version>
-        <tomcat-embed.version>10.1.43</tomcat-embed.version>
+        <tomcat-embed.version>10.1.44</tomcat-embed.version>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
         <dockerfile-maven-plugin.version>1.4.10</dockerfile-maven-plugin.version>
         <jmockit.version>1.49</jmockit.version>
