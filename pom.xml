@@ -94,8 +94,8 @@
         <spring.security.version>6.3.8</spring.security.version>
         <spring-cloud.version>2025.0.0</spring-cloud.version>
         <spring-cloud-aws-version>3.0.2</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
-        <spring-cloud-starter-consul.version>4.1.1</spring-cloud-starter-consul.version>
-        <spring-cloud-starter-vault.version>4.1.1</spring-cloud-starter-vault.version>
+        <spring-cloud-starter-consul.version>4.3.0</spring-cloud-starter-consul.version>
+        <spring-cloud-starter-vault.version>4.3.0</spring-cloud-starter-vault.version>
         <aws-java-sdk.version>2.21.2</aws-java-sdk.version>
         <drools.version>8.37.0.Final</drools.version>
         <drools-dynamic.version>7.74.0.Final</drools-dynamic.version>
