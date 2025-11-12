@@ -52,7 +52,7 @@
             \___ \| '_ \ / _ \| '_ ` _ \ / _ \/ _` |
              ___) | | | | (_) | | | | | |  __/ (_| |
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
-        <snomed-parent-owasp.version>1.0.7</snomed-parent-owasp.version>
+        <snomed-parent-owasp.version>1.0.8-SNAPSHOT</snomed-parent-owasp.version>
         <otf-common.version>7.10.0-SNAPSHOT</otf-common.version>
 	    <reporting-core.version>7.10.0-SNAPSHOT</reporting-core.version>
         <ihtsdo-spring-sso.version>5.6.0</ihtsdo-spring-sso.version>
