@@ -67,7 +67,7 @@
         <snomed-scg-parser.version>3.1.0</snomed-scg-parser.version>
         <snomed-query-service.version>5.6.0</snomed-query-service.version>
         <cis-client.version>2.2.0</cis-client.version>
-        <spellcheck-core.version>3.7.0</spellcheck-core.version>
+        <spellcheck-core.version>3.8.0-SNAPSHOT</spellcheck-core.version>
         <jira-client.version>1.2.0-IHTSDO</jira-client.version>
         <jena_version>5.5.0</jena_version>
 
