@@ -74,7 +74,7 @@
         Current Elasticsearch _Server_ version supported by spring-data-elasticsearch is 8.7.1
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
         -->
-        <elasticsearch.version>8.18.8</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
+        <elasticsearch.version>8.19.8</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
         <elasticvc.version>7.1.0-SNAPSHOT</elasticvc.version>
         <spring-data-elasticsearch.version>5.5.5</spring-data-elasticsearch.version>
         <lucene.version>9.12.0</lucene.version>
