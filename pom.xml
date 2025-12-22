@@ -130,6 +130,7 @@
         <mockito.version>5.8.0</mockito.version>
         <localstack.version>1.19.3</localstack.version>
         <io.dropwizard.version>4.2.25</io.dropwizard.version>
+        <sonar.version>5.5.0.6356</sonar.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -1392,6 +1393,11 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar.version}</version>
             </plugin>
         </plugins>
     </build>
