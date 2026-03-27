@@ -623,7 +623,7 @@
                 <artifactId>json</artifactId>
                 <version>${json.version}</version>
             </dependency>
-            
+
             <!-- For Excel sheet reading -->
             <dependency>
                 <groupId>org.apache.poi</groupId>
@@ -900,8 +900,24 @@
                 <artifactId>grpc-context</artifactId>
                 <version>1.74.0</version>
             </dependency>
-            <!-- override hapi-fhir dependencies (CVE) -->
-            <!-- Following can be removed when future release of hapi-fhir is updated -->
+
+          <!-- override hapi-fhir dependencies (CVE) -->
+          <!-- override hapi-fhir org.hl7.fhir.* dependencies (CVE-2026-33180, CVSS 9.8) -->
+          <!-- Can be removed when hapi-fhir upgrades fhir_core_version to >= 6.9.0 -->
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.utilities</artifactId>
+            <version>6.9.0</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.r4</artifactId>
+            <version>6.9.0</version>
+          </dependency>
+          <!-- + r5, convertors, validation, dstu3, etc. -->
+          <!-- end of CVE-2026-33180 fixes -->
+
+          <!-- Following can be removed when future release of hapi-fhir is updated -->
             <dependency>
                 <!-- CVE-2024-7254(8.7) -->
                 <groupId>com.google.protobuf</groupId>
@@ -1011,7 +1027,7 @@
                 <artifactId>powermock-api-mockito</artifactId>
                 <version>${powermock.version}</version>
                 <scope>test</scope>
-            </dependency>            
+            </dependency>
 
             <dependency>
                 <groupId>org.apache.commons</groupId>
