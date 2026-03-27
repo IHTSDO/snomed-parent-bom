@@ -902,21 +902,6 @@
             </dependency>
 
           <!-- override hapi-fhir dependencies (CVE) -->
-          <!-- override hapi-fhir org.hl7.fhir.* dependencies (CVE-2026-33180, CVSS 9.8) -->
-          <!-- Can be removed when hapi-fhir upgrades fhir_core_version to >= 6.9.0 -->
-          <dependency>
-            <groupId>ca.uhn.hapi.fhir</groupId>
-            <artifactId>org.hl7.fhir.utilities</artifactId>
-            <version>6.9.0</version>
-          </dependency>
-          <dependency>
-            <groupId>ca.uhn.hapi.fhir</groupId>
-            <artifactId>org.hl7.fhir.r4</artifactId>
-            <version>6.9.0</version>
-          </dependency>
-          <!-- + r5, convertors, validation, dstu3, etc. -->
-          <!-- end of CVE-2026-33180 fixes -->
-
           <!-- Following can be removed when future release of hapi-fhir is updated -->
             <dependency>
                 <!-- CVE-2024-7254(8.7) -->
@@ -931,6 +916,59 @@
                 <version>1.0.9</version>
             </dependency>
             <!-- end of override hapi-fhir dependencies (CVE) -->
+          <!-- override hapi-fhir org.hl7.fhir.* dependencies (CVE-2026-33180, CVSS 9.8) -->
+          <!-- Can be removed when hapi-fhir upgrades fhir_core_version to >= 6.9.0 -->
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.r5</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.r4</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.r4b</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.utilities</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.validation</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.convertors</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.core</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.dstu3</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.dstu2</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>org.hl7.fhir.dstu2016may</artifactId>
+            <version>6.9.4</version>
+          </dependency>
+          <!-- end override CVE-2026-33180 -->
             <dependency>
                 <groupId>org.thymeleaf</groupId>
                 <artifactId>thymeleaf</artifactId>
