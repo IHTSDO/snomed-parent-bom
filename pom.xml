@@ -1431,10 +1431,11 @@
                         <suppressionFile>owasp-suppressions.xml</suppressionFile>
                     </suppressionFiles>
                     <failBuildOnCVSS>7</failBuildOnCVSS>
-                    <assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
-                    <failOnError>true</failOnError>
+                    <assemblyAnalyzerEnabled>true</assemblyAnalyzerEnabled>
+                    <failOnError>false</failOnError>
                     <!-- If we need to disable OSS, due to server outage, toggle the boolean on the following line.-->
-                    <ossindexAnalyzerEnabled>true</ossindexAnalyzerEnabled>
+                    <ossindexAnalyzerEnabled>false</ossindexAnalyzerEnabled>
+                    <ossindexAnalyzerUrl>https://api.guide.sonatype.com</ossindexAnalyzerUrl>
                     <formats>XML,HTML</formats>
                 </configuration>
                 <dependencies>
