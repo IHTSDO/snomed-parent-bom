@@ -147,12 +147,6 @@
             <version>${snomed-parent-owasp.version}</version>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>apache-jena-libs</artifactId>
-            <version>${jena_version}</version>
-            <type>pom</type>
-        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -612,6 +606,12 @@
                 <artifactId>activemq-kahadb-store</artifactId>
                 <version>${activemq.version}</version>
                 <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.jena</groupId>
+                <artifactId>apache-jena-libs</artifactId>
+                <version>${jena_version}</version>
+                <type>pom</type>
             </dependency>
             <dependency>
                 <groupId>com.google.code.gson</groupId>
