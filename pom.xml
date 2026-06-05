@@ -43,9 +43,10 @@
          _  | |/ _` \ \ / / _` |  \ \ / / _ \ '__/ __| |/ _ \| '_ \
         | |_| | (_| |\ V / (_| |   \ V /  __/ |  \__ \ | (_) | | | |
          \___/ \__,_| \_/ \__,_|    \_/ \___|_|  |___/_|\___/|_| |_| -->
-        <java.version>17</java.version>
+        <java.version>25</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
 
         <!-- ____                                 _
             / ___| _ __   ___  _ __ ___   ___  __| |
