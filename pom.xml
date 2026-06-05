@@ -129,7 +129,7 @@
         <easymock.version>4.3</easymock.version>
         <powermock.version>1.6.3</powermock.version>
         <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
-        <branch-path-uri-rewrite-filter.version>5.0.0</branch-path-uri-rewrite-filter.version>
+        <branch-path-uri-rewrite-filter.version>6.0.0-SNAPSHOT</branch-path-uri-rewrite-filter.version>
         <mockito.version>5.8.0</mockito.version>
         <localstack.version>1.19.3</localstack.version>
         <io.dropwizard.version>4.2.25</io.dropwizard.version>
