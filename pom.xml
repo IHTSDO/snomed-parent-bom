@@ -58,7 +58,7 @@
 	    <reporting-core.version>7.12.0-SNAPSHOT</reporting-core.version>
         <ihtsdo-spring-sso.version>6.0.0-SNAPSHOT</ihtsdo-spring-sso.version>
         <snomed-boot.version>6.0.0-SNAPSHOT</snomed-boot.version>
-        <snomed-drools.version>5.9.0-SNAPSHOT</snomed-drools.version>
+        <snomed-drools.version>6.0.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>6.0.0-SNAPSHOT</snomed-owl-toolkit.version>
         <snomed-utilities.version>3.0.0-SNAPSHOT</snomed-utilities.version>
         <snomed-template-parser.version>5.0.0-SNAPSHOT</snomed-template-parser.version>
