@@ -56,7 +56,7 @@
         <snomed-parent-owasp.version>1.0.10-SNAPSHOT</snomed-parent-owasp.version>
         <otf-common.version>7.12.0-SNAPSHOT</otf-common.version>
 	    <reporting-core.version>7.12.0-SNAPSHOT</reporting-core.version>
-        <ihtsdo-spring-sso.version>5.8.0</ihtsdo-spring-sso.version>
+        <ihtsdo-spring-sso.version>6.0.0-SNAPSHOT</ihtsdo-spring-sso.version>
         <snomed-boot.version>6.0.0-SNAPSHOT</snomed-boot.version>
         <snomed-drools.version>5.9.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>5.9.0-SNAPSHOT</snomed-owl-toolkit.version>
