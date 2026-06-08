@@ -63,7 +63,7 @@
         <snomed-utilities.version>3.0.0-SNAPSHOT</snomed-utilities.version>
         <snomed-template-parser.version>5.0.0-SNAPSHOT</snomed-template-parser.version>
         <snomed-ecl-parser.version>4.0.0-SNAPSHOT</snomed-ecl-parser.version>
-        <mrcm-validator.version>3.13.0-SNAPSHOT</mrcm-validator.version>
+        <mrcm-validator.version>4.0.0-SNAPSHOT</mrcm-validator.version>
         <snomed-scg-parser.version>3.1.0</snomed-scg-parser.version>
         <snomed-query-service.version>6.0.0-SNAPSHOT</snomed-query-service.version>
         <cis-client.version>2.2.0</cis-client.version>
