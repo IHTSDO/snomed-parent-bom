@@ -94,7 +94,7 @@
         <spring-boot.version>3.5.14</spring-boot.version>
         <spring.security.version>6.5.11</spring.security.version>
         <spring-cloud.version>2025.0.0</spring-cloud.version>
-        <spring-cloud-aws-version>3.0.2</spring-cloud-aws-version>  <!-- 3.0.2 requires big changes in otf-common -->
+        <spring-cloud-aws-version>3.4.2</spring-cloud-aws-version>
         <spring-cloud-starter-consul.version>4.3.0</spring-cloud-starter-consul.version>
         <spring-cloud-starter-vault.version>4.3.0</spring-cloud-starter-vault.version>
         <aws-java-sdk.version>2.21.2</aws-java-sdk.version>
