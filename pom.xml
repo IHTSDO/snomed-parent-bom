@@ -135,6 +135,7 @@
         <localstack.version>1.19.3</localstack.version>
         <io.dropwizard.version>4.2.25</io.dropwizard.version>
         <sonar.version>5.5.0.6356</sonar.version>
+        <lombok.version>1.18.42</lombok.version>
     </properties>
 
     <!-- ____                            _                 _
@@ -1327,7 +1328,7 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <scope>provided</scope>
-                <version>1.18.32</version>
+                <version>${lombok.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.atlassian.crowd</groupId>
