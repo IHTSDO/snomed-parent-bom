@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -53,21 +53,21 @@
             \___ \| '_ \ / _ \| '_ ` _ \ / _ \/ _` |
              ___) | | | | (_) | | | | | |  __/ (_| |
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
-        <snomed-parent-owasp.version>1.0.10-SNAPSHOT</snomed-parent-owasp.version>
-        <otf-common.version>8.0.0-SNAPSHOT</otf-common.version>
-	    <reporting-core.version>8.0.0-SNAPSHOT</reporting-core.version>
-        <ihtsdo-spring-sso.version>6.0.0-SNAPSHOT</ihtsdo-spring-sso.version>
-        <snomed-boot.version>6.0.0-SNAPSHOT</snomed-boot.version>
-        <snomed-drools.version>6.0.0-SNAPSHOT</snomed-drools.version>
-        <snomed-owl-toolkit.version>6.0.0-SNAPSHOT</snomed-owl-toolkit.version>
-        <snomed-utilities.version>3.0.0-SNAPSHOT</snomed-utilities.version>
-        <snomed-template-parser.version>5.0.0-SNAPSHOT</snomed-template-parser.version>
-        <snomed-ecl-parser.version>4.0.0-SNAPSHOT</snomed-ecl-parser.version>
-        <mrcm-validator.version>4.0.0-SNAPSHOT</mrcm-validator.version>
-        <snomed-scg-parser.version>4.0.0-SNAPSHOT</snomed-scg-parser.version>
-        <snomed-query-service.version>6.0.0-SNAPSHOT</snomed-query-service.version>
-        <cis-client.version>3.0.0-SNAPSHOT</cis-client.version>
-        <spellcheck-core.version>4.0.0-SNAPSHOT</spellcheck-core.version>
+        <snomed-parent-owasp.version>1.0.10</snomed-parent-owasp.version>
+        <otf-common.version>8.0.0</otf-common.version>
+	    <reporting-core.version>8.0.0</reporting-core.version>
+        <ihtsdo-spring-sso.version>6.0.0</ihtsdo-spring-sso.version>
+        <snomed-boot.version>6.0.0</snomed-boot.version>
+        <snomed-drools.version>6.0.0</snomed-drools.version>
+        <snomed-owl-toolkit.version>6.0.0</snomed-owl-toolkit.version>
+        <snomed-utilities.version>3.0.0</snomed-utilities.version>
+        <snomed-template-parser.version>5.0.0</snomed-template-parser.version>
+        <snomed-ecl-parser.version>4.0.0</snomed-ecl-parser.version>
+        <mrcm-validator.version>4.0.0</mrcm-validator.version>
+        <snomed-scg-parser.version>4.0.0</snomed-scg-parser.version>
+        <snomed-query-service.version>6.0.0</snomed-query-service.version>
+        <cis-client.version>3.0.0</cis-client.version>
+        <spellcheck-core.version>4.0.0</spellcheck-core.version>
         <jira-client.version>1.2.0-IHTSDO</jira-client.version>
         <jena_version>5.5.0</jena_version>
         <thrift.version>0.23.0</thrift.version>
@@ -77,7 +77,7 @@
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
         -->
         <elasticsearch.version>8.19.8</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
-        <elasticvc.version>8.0.0-SNAPSHOT</elasticvc.version>
+        <elasticvc.version>8.0.0</elasticvc.version>
         <spring-data-elasticsearch.version>5.5.5</spring-data-elasticsearch.version>
         <lucene.version>9.12.0</lucene.version>
         <lucene-analyzers-common.version>8.11.4</lucene-analyzers-common.version>
@@ -131,7 +131,7 @@
         <easymock.version>4.3</easymock.version>
         <powermock.version>1.6.3</powermock.version>
         <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
-        <branch-path-uri-rewrite-filter.version>6.0.0-SNAPSHOT</branch-path-uri-rewrite-filter.version>
+        <branch-path-uri-rewrite-filter.version>6.0.0</branch-path-uri-rewrite-filter.version>
         <mockito.version>5.8.0</mockito.version>
         <localstack.version>1.19.3</localstack.version>
         <io.dropwizard.version>4.2.25</io.dropwizard.version>
