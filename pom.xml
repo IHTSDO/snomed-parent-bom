@@ -55,7 +55,7 @@
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
         <snomed-parent-owasp.version>1.0.10</snomed-parent-owasp.version>
         <otf-common.version>8.1.0-SNAPSHOT</otf-common.version>
-	<reporting-core.version>8.1.0-SNAPSHOT</reporting-core.version>
+        <reporting-core.version>8.1.0-SNAPSHOT</reporting-core.version>
         <ihtsdo-spring-sso.version>6.0.0</ihtsdo-spring-sso.version>
         <snomed-boot.version>6.0.0</snomed-boot.version>
         <snomed-drools.version>6.0.0</snomed-drools.version>
@@ -1010,6 +1010,12 @@
                 <groupId>org.projectreactor</groupId>
                 <artifactId>reactor-spring</artifactId>
                 <version>1.0.1.RELEASE</version>
+            </dependency>
+            <!-- Override httpclient5 to 5.6.4 (CVE-2026-71290) -->
+            <dependency>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5</artifactId>
+                <version>5.6.4</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
