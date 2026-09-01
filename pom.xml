@@ -89,13 +89,19 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
 
-        <spring.version>7.0.8</spring.version>
-        <spring-boot.version>4.1.0</spring-boot.version>
-        <!-- spring-security is left to spring-boot-dependencies (4.1.0 manages 7.1.0). -->
+        <!-- Must stay in lockstep with spring-boot.version: spring-framework-bom is imported
+             above spring-boot-dependencies, so this wins over whatever Boot manages. 4.1.1
+             manages exactly 7.0.9, which carries the CVE-2026-47890 fix (bare CR in a rendered
+             view fragment could corrupt the SSE stream other users receive; affects 7.0.0-7.0.8). -->
+        <spring.version>7.0.9</spring.version>
+        <spring-boot.version>4.1.1</spring-boot.version>
+        <!-- spring-security is left to spring-boot-dependencies (4.1.1 manages 7.1.1). -->
         <springdoc.version>3.1.0</springdoc.version><!-- 3.x is the Spring Boot 4 line; 2.x is Boot 3 only -->
-        <spring-cloud.version>2025.1.2</spring-cloud.version>
-        <spring-cloud-aws-version>4.1.0</spring-cloud-aws-version>
-        <spring-cloud-starter-consul.version>5.0.2</spring-cloud-starter-consul.version>
+        <!-- Oakwood. 2025.1.2 is the first patch to support Boot 4.1.x; 2025.1.3 is the
+             current one and manages consul 5.0.3 / vault 5.0.2. -->
+        <spring-cloud.version>2025.1.3</spring-cloud.version>
+        <spring-cloud-aws-version>4.1.1</spring-cloud-aws-version>
+        <spring-cloud-starter-consul.version>5.0.3</spring-cloud-starter-consul.version>
         <spring-cloud-starter-vault.version>5.0.2</spring-cloud-starter-vault.version>
         <aws-java-sdk.version>2.21.2</aws-java-sdk.version>
         <drools.version>10.2.0</drools.version>
@@ -116,7 +122,7 @@
              line), so a single flat version cannot be applied to every module. The BOM carries
              that exception itself via its jackson.version.annotations property.
              Jackson 3 (the tools.jackson groups) is left to spring-boot-dependencies, which
-             imports jackson-bom 3.1.4; the two lines coexist on the classpath. -->
+             imports jackson-bom 3.1.5; the two lines coexist on the classpath. -->
         <jackson.version>2.21.4</jackson.version>
         <jdeb-plugin.version>1.10</jdeb-plugin.version>
         <json.version>20250107</json.version>
@@ -253,7 +259,7 @@
                 <artifactId>tomcat-embed-websocket</artifactId>
                 <version>${tomcat-embed.version}</version>
             </dependency>
-            <!-- spring-security is managed by spring-boot-dependencies (7.1.0 in Boot 4.1.0). -->
+            <!-- spring-security is managed by spring-boot-dependencies (7.1.1 in Boot 4.1.1). -->
 
             <!-- ____             _               ____              _
                 / ___| _ __  _ __(_)_ __   __ _  | __ )  ___   ___ | |_
@@ -381,10 +387,10 @@
                 <version>${elasticsearch.version}</version>
             </dependency>
             <!-- Apache HttpClient 5 transport. Rest5Client is the supported transport from
-                 elasticsearch-java 9.x. Spring Boot 4.1.0 does manage both elasticsearch-java
-                 and elasticsearch-rest5-client (elasticsearch-client.version = 9.4.2), so the
+                 elasticsearch-java 9.x. Spring Boot 4.1.1 does manage both elasticsearch-java
+                 and elasticsearch-rest5-client (elasticsearch-client.version = 9.4.5), so the
                  pins above and here are a deliberate bump to 9.5.2, one minor ahead of the
-                 combination Boot and spring-data-elasticsearch 6.1.0 are tested against - keep
+                 combination Boot and spring-data-elasticsearch 6.1.1 are tested against - keep
                  them in step with each other and with elasticvc.
                  The legacy org.elasticsearch.client artefacts below are genuinely unmanaged by
                  Boot 4; they remain an optional dependency of spring-data-elasticsearch 6.1.x
@@ -418,7 +424,7 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <!-- spring-data-elasticsearch is managed by spring-data-bom (6.1.0 via Boot 4.1.0). -->
+            <!-- spring-data-elasticsearch is managed by spring-data-bom (6.1.1 via Boot 4.1.1). -->
             <dependency>
                 <groupId>org.ihtsdo.otf</groupId>
                 <artifactId>snomed-query-service</artifactId>
