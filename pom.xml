@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>4.1.0-SNAPSHOT</version>
+    <version>5.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -73,12 +73,11 @@
         <thrift.version>0.24.0</thrift.version>
 
         <!--
-        Current Elasticsearch _Server_ version supported by spring-data-elasticsearch is 8.7.1
+        Current Elasticsearch _Server_ version supported by spring-data-elasticsearch 6.1.x is 9.5.2.
         N.B. Remember to keep TestConfig.ELASTIC_SEARCH_SERVER_VERSION and getting-started guide updated.
         -->
-        <elasticsearch.version>8.19.8</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
-        <elasticvc.version>8.0.0</elasticvc.version>
-        <spring-data-elasticsearch.version>5.5.5</spring-data-elasticsearch.version>
+        <elasticsearch.version>9.5.2</elasticsearch.version><!-- Should match the elasticvc -> elasticsearch -->
+        <elasticvc.version>9.0.0-SNAPSHOT</elasticvc.version>
         <lucene.version>9.12.0</lucene.version>
         <lucene-analyzers-common.version>8.11.4</lucene-analyzers-common.version>
         <hapi-fhir.version>7.6.0</hapi-fhir.version>
@@ -90,13 +89,13 @@
               \ V /  __/ |  \__ \ | (_) | | | \__ \
                \_/ \___|_|  |___/_|\___/|_| |_|___/ -->
 
-        <spring.version>6.2.19</spring.version>
-        <spring-boot.version>3.5.14</spring-boot.version>
-        <spring.security.version>6.5.11</spring.security.version>
-        <spring-cloud.version>2025.0.0</spring-cloud.version>
-        <spring-cloud-aws-version>3.4.2</spring-cloud-aws-version>
-        <spring-cloud-starter-consul.version>4.3.0</spring-cloud-starter-consul.version>
-        <spring-cloud-starter-vault.version>4.3.0</spring-cloud-starter-vault.version>
+        <spring.version>7.0.8</spring.version>
+        <spring-boot.version>4.1.0</spring-boot.version>
+        <!-- spring-security is left to spring-boot-dependencies (4.1.0 manages 7.1.0). -->
+        <spring-cloud.version>2025.1.2</spring-cloud.version>
+        <spring-cloud-aws-version>4.1.0</spring-cloud-aws-version>
+        <spring-cloud-starter-consul.version>5.0.2</spring-cloud-starter-consul.version>
+        <spring-cloud-starter-vault.version>5.0.2</spring-cloud-starter-vault.version>
         <aws-java-sdk.version>2.21.2</aws-java-sdk.version>
         <drools.version>10.2.0</drools.version>
         <mvel.version>2.5.2.Final</mvel.version>
@@ -104,35 +103,46 @@
         <activemq.version>6.2.8</activemq.version>
         <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
         <dependency-check-maven.version>12.1.3</dependency-check-maven.version>
+        <!-- 33.4.x dropped AbstractFuture's sun.misc.Unsafe atomic helper, which triggers a
+             terminal-deprecation warning on JDK 25 and would break outright once
+             Unsafe::objectFieldOffset is removed. -->
+        <guava.version>33.4.8-jre</guava.version>
         <gson.version>2.10.1</gson.version>
-        <jackson.version>2.18.8</jackson.version>
+        <!-- The Jackson 2 line, which elasticsearch-java still requires. Applied by importing
+             com.fasterxml.jackson:jackson-bom below rather than by pinning each module: from
+             2.20 onwards jackson-annotations drops the patch component (it ships once per minor
+             line), so a single flat version cannot be applied to every module. The BOM carries
+             that exception itself via its jackson.version.annotations property.
+             Jackson 3 (the tools.jackson groups) is left to spring-boot-dependencies, which
+             imports jackson-bom 3.1.4; the two lines coexist on the classpath. -->
+        <jackson.version>2.21.4</jackson.version>
         <jaxb-api.version>2.3.1</jaxb-api.version>
         <jdeb-plugin.version>1.10</jdeb-plugin.version>
         <json.version>20250107</json.version>
         <log4j.version>2.25.4</log4j.version>
-        <slf4j.version>2.0.9</slf4j.version>
-        <snakeyaml.version>2.2</snakeyaml.version>
+        <slf4j.version>2.0.18</slf4j.version>
+        <snakeyaml.version>2.6</snakeyaml.version>
         <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
-        <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.5.6</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.5.6</maven-failsafe-plugin.version>
+        <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <netty.version>4.2.17.Final</netty.version>
         <poi.version>5.3.0</poi.version>
         <commons-io.version>2.16.1</commons-io.version>
         <xstream.version>1.4.21</xstream.version>
         <joda-time.version>2.12.4</joda-time.version>
         <owlapi.version>4.1.3</owlapi.version> <!-- Note 4.5.9 or later needed for Java 16+, but OWLAPI will need thorough testing! -->
-        <testcontainers.version>2.0.3</testcontainers.version>
+        <testcontainers.version>2.0.5</testcontainers.version>
         <tomcat-embed.version>11.0.25</tomcat-embed.version>
         <httpcore5.version>5.4.3</httpcore5.version>
-        <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.15</jacoco-maven-plugin.version>
         <dockerfile-maven-plugin.version>1.4.10</dockerfile-maven-plugin.version>
         <jmockit.version>1.49</jmockit.version>
         <easymock.version>4.3</easymock.version>
         <powermock.version>1.6.3</powermock.version>
-        <jakarta-servlet-api.version>6.0.0</jakarta-servlet-api.version>
+        <jakarta-servlet-api.version>6.1.0</jakarta-servlet-api.version>
         <branch-path-uri-rewrite-filter.version>6.0.0</branch-path-uri-rewrite-filter.version>
-        <mockito.version>5.8.0</mockito.version>
+        <mockito.version>5.23.0</mockito.version>
         <localstack.version>1.19.3</localstack.version>
         <io.dropwizard.version>4.2.25</io.dropwizard.version>
         <sonar.version>5.5.0.6356</sonar.version>
@@ -242,26 +252,7 @@
                 <artifactId>tomcat-embed-websocket</artifactId>
                 <version>${tomcat-embed.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-config</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-web</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-core</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-crypto</artifactId>
-                <version>${spring.security.version}</version>
-            </dependency>
+            <!-- spring-security is managed by spring-boot-dependencies (7.1.0 in Boot 4.1.0). -->
 
             <!-- ____             _               ____              _
                 / ___| _ __  _ __(_)_ __   __ _  | __ )  ___   ___ | |_
@@ -269,6 +260,20 @@
                  ___) | |_) | |  | | | | | (_| | | |_) | (_) | (_) | |_
                 |____/| .__/|_|  |_|_| |_|\__, | |____/ \___/ \___/ \__|
                       |_|                 |___/ -->
+            <!-- Jackson 2 (the line elasticsearch-java still requires). Covers every module -
+                 core, annotations, databind, datatypes, dataformats - and applies
+                 jackson-annotations' own version scheme, so the modules never have to be listed
+                 or bumped individually. MUST stay above the spring-boot-dependencies import:
+                 for imported BOMs the first declaration wins, and Boot imports this same BOM,
+                 so declaring it later would silently make ${jackson.version} a no-op. -->
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${jackson.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -374,16 +379,31 @@
                 <artifactId>elasticsearch-java</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
+            <!-- Apache HttpClient 5 transport. Rest5Client is the supported transport from
+                 elasticsearch-java 9.x. Spring Boot 4.1.0 does manage both elasticsearch-java
+                 and elasticsearch-rest5-client (elasticsearch-client.version = 9.4.2), so the
+                 pins above and here are a deliberate bump to 9.5.2, one minor ahead of the
+                 combination Boot and spring-data-elasticsearch 6.1.0 are tested against - keep
+                 them in step with each other and with elasticvc.
+                 The legacy org.elasticsearch.client artefacts below are genuinely unmanaged by
+                 Boot 4; they remain an optional dependency of spring-data-elasticsearch 6.1.x
+                 and are kept only until the RestClientBuilder customisations are ported. -->
+            <dependency>
+                <groupId>co.elastic.clients</groupId>
+                <artifactId>elasticsearch-rest5-client</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-client</artifactId>
-                <version>8.19.8</version>
+                <version>${elasticsearch.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-client-sniffer</artifactId>
-                <version>8.19.8</version>
+                <version>${elasticsearch.version}</version>
             </dependency>
 
             <dependency>
@@ -397,11 +417,7 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-elasticsearch</artifactId>
-                <version>${spring-data-elasticsearch.version}</version>
-            </dependency>
+            <!-- spring-data-elasticsearch is managed by spring-data-bom (6.1.0 via Boot 4.1.0). -->
             <dependency>
                 <groupId>org.ihtsdo.otf</groupId>
                 <artifactId>snomed-query-service</artifactId>
@@ -555,41 +571,9 @@
              _  | |/ _` |/ __| |/ / __|/ _ \| '_ \
             | |_| | (_| | (__|   <\__ \ (_) | | | |
              \___/ \__,_|\___|_|\_\___/\___/|_| |_|-->
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-annotations</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.datatype</groupId>
-                <artifactId>jackson-datatype-jsr310</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.dataformat</groupId>
-                <artifactId>jackson-dataformat-cbor</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.dataformat</groupId>
-                <artifactId>jackson-dataformat-csv</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.dataformat</groupId>
-                <artifactId>jackson-dataformat-xml</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
+            <!-- Jackson 2 is managed by the com.fasterxml.jackson:jackson-bom import declared
+                 above the spring-boot-dependencies import, which is where it has to sit to
+                 take effect. Jackson 3 (tools.jackson.*) comes from Spring Boot. -->
 
             <!--    _    _ _    ___  _   _
                    / \  | | |  / _ \| |_| |__   ___ _ __ ___
@@ -724,7 +708,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>32.1.1-jre</version>
+                <version>${guava.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.mashape.unirest</groupId>
