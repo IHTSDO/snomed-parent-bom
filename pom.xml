@@ -61,7 +61,7 @@
         <snomed-drools.version>7.0.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>7.0.0-SNAPSHOT</snomed-owl-toolkit.version>
         <snomed-utilities.version>3.0.0</snomed-utilities.version>
-        <snomed-template-parser.version>5.0.0</snomed-template-parser.version>
+        <snomed-template-parser.version>6.0.0-SNAPSHOT</snomed-template-parser.version>
         <!-- The two ANTLR grammar parsers below deliberately stay on the 4.x line rather than
              joining the Boot 4 major wave. Neither depends on Spring, Jackson or Elasticsearch -
              antlr4-runtime (and commons-validator for scg) is the whole compile classpath - so
