@@ -71,7 +71,7 @@
              ecl-parser takes a minor for the unreleased ECL 2.1/2.2 work, which is purely
              additive; scg-parser has no source change at all since 4.0.0, so it stays there. -->
         <snomed-ecl-parser.version>4.1.0-SNAPSHOT</snomed-ecl-parser.version>
-        <mrcm-validator.version>4.1.0-SNAPSHOT</mrcm-validator.version>
+        <mrcm-validator.version>5.0.0-SNAPSHOT</mrcm-validator.version>
         <snomed-scg-parser.version>4.0.0</snomed-scg-parser.version>
         <snomed-query-service.version>7.0.0-SNAPSHOT</snomed-query-service.version>
         <cis-client.version>4.0.0-SNAPSHOT</cis-client.version>
