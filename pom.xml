@@ -54,8 +54,8 @@
              ___) | | | | (_) | | | | | |  __/ (_| |
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
         <snomed-parent-owasp.version>1.0.10</snomed-parent-owasp.version>
-        <otf-common.version>8.0.1</otf-common.version>
-	<reporting-core.version>8.0.1</reporting-core.version>
+        <otf-common.version>8.0.3</otf-common.version>
+        <reporting-core.version>8.0.3</reporting-core.version>
         <ihtsdo-spring-sso.version>6.0.0</ihtsdo-spring-sso.version>
         <snomed-boot.version>6.0.0</snomed-boot.version>
         <snomed-drools.version>6.0.0</snomed-drools.version>
