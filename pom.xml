@@ -62,15 +62,7 @@
         <snomed-owl-toolkit.version>7.0.0-SNAPSHOT</snomed-owl-toolkit.version>
         <snomed-utilities.version>3.0.0</snomed-utilities.version>
         <snomed-template-parser.version>6.0.0-SNAPSHOT</snomed-template-parser.version>
-        <!-- The two ANTLR grammar parsers below deliberately stay on the 4.x line rather than
-             joining the Boot 4 major wave. Neither depends on Spring, Jackson or Elasticsearch -
-             antlr4-runtime (and commons-validator for scg) is the whole compile classpath - so
-             nothing in the Boot 4 / ES 9 upgrade reaches them, their transitive deps are
-             unchanged, and both already targeted Java 25 at 4.0.0. A major bump would signal a
-             break to consumers that does not exist.
-             ecl-parser takes a minor for the unreleased ECL 2.1/2.2 work, which is purely
-             additive; scg-parser has no source change at all since 4.0.0, so it stays there. -->
-        <snomed-ecl-parser.version>4.1.0-SNAPSHOT</snomed-ecl-parser.version>
+        <snomed-ecl-parser.version>5.0.0-SNAPSHOT</snomed-ecl-parser.version>
         <mrcm-validator.version>5.0.0-SNAPSHOT</mrcm-validator.version>
         <snomed-scg-parser.version>4.0.0</snomed-scg-parser.version>
         <snomed-query-service.version>7.0.0-SNAPSHOT</snomed-query-service.version>
@@ -817,7 +809,7 @@
             <dependency>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-runtime</artifactId>
-                <version>4.5.3</version>
+                <version>4.13.2</version>
             </dependency>
             <dependency>
                 <groupId>org.modelmapper</groupId>
