@@ -55,15 +55,15 @@
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
         <snomed-parent-owasp.version>1.0.10</snomed-parent-owasp.version>
         <otf-common.version>8.0.3</otf-common.version>
-        <reporting-core.version>8.0.3</reporting-core.version>
+        <reporting-core.version>8.0.4</reporting-core.version>
         <ihtsdo-spring-sso.version>6.0.0</ihtsdo-spring-sso.version>
         <snomed-boot.version>6.0.0</snomed-boot.version>
         <snomed-drools.version>6.0.0</snomed-drools.version>
-        <snomed-owl-toolkit.version>6.0.0</snomed-owl-toolkit.version>
+        <snomed-owl-toolkit.version>6.0.1</snomed-owl-toolkit.version>
         <snomed-utilities.version>3.0.0</snomed-utilities.version>
         <snomed-template-parser.version>5.0.0</snomed-template-parser.version>
         <snomed-ecl-parser.version>4.0.0</snomed-ecl-parser.version>
-        <mrcm-validator.version>4.0.2</mrcm-validator.version>
+        <mrcm-validator.version>4.0.3</mrcm-validator.version>
         <snomed-scg-parser.version>4.0.0</snomed-scg-parser.version>
         <snomed-query-service.version>6.0.1</snomed-query-service.version>
         <cis-client.version>3.0.0</cis-client.version>
