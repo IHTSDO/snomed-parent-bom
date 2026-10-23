@@ -13,7 +13,7 @@
     <description>Snomed master Parent BOM project, to centralize and control dependencies more conveniently</description>
     <groupId>org.snomed</groupId>
     <artifactId>snomed-parent-bom</artifactId>
-    <version>5.0.0-SNAPSHOT</version>
+    <version>5.0.0</version>
     <packaging>pom</packaging>
 
     <!--    _                     _            ____    ___    _ _
@@ -53,21 +53,21 @@
             \___ \| '_ \ / _ \| '_ ` _ \ / _ \/ _` |
              ___) | | | | (_) | | | | | |  __/ (_| |
             |____/|_| |_|\___/|_| |_| |_|\___|\__,_| -->
-        <snomed-parent-owasp.version>1.1.0-SNAPSHOT</snomed-parent-owasp.version>
-        <otf-common.version>9.0.0-SNAPSHOT</otf-common.version>
+        <snomed-parent-owasp.version>1.1.0</snomed-parent-owasp.version>
+        <otf-common.version>9.0.0</otf-common.version>
         <reporting-core.version>9.0.0-SNAPSHOT</reporting-core.version>
-        <ihtsdo-spring-sso.version>7.0.0-SNAPSHOT</ihtsdo-spring-sso.version>
+        <ihtsdo-spring-sso.version>7.0.0</ihtsdo-spring-sso.version>
         <snomed-boot.version>7.0.0-SNAPSHOT</snomed-boot.version>
         <snomed-drools.version>7.0.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>7.0.0-SNAPSHOT</snomed-owl-toolkit.version>
         <snomed-utilities.version>3.0.0</snomed-utilities.version>
-        <snomed-template-parser.version>6.0.0-SNAPSHOT</snomed-template-parser.version>
+        <snomed-template-parser.version>6.0.0</snomed-template-parser.version>
         <snomed-ecl-parser.version>5.0.0-SNAPSHOT</snomed-ecl-parser.version>
         <mrcm-validator.version>5.0.0-SNAPSHOT</mrcm-validator.version>
         <snomed-scg-parser.version>5.0.0-SNAPSHOT</snomed-scg-parser.version>
-        <snomed-query-service.version>7.0.0-SNAPSHOT</snomed-query-service.version>
+        <snomed-query-service.version>7.0.0</snomed-query-service.version>
         <cis-client.version>4.0.0-SNAPSHOT</cis-client.version>
-        <spellcheck-core.version>5.0.0-SNAPSHOT</spellcheck-core.version>
+        <spellcheck-core.version>5.0.0</spellcheck-core.version>
         <jira-client.version>1.2.0-IHTSDO</jira-client.version>
         <jena_version>5.5.0</jena_version>
         <thrift.version>0.24.0</thrift.version>
@@ -148,7 +148,7 @@
         <easymock.version>4.3</easymock.version>
         <powermock.version>1.6.3</powermock.version>
         <jakarta-servlet-api.version>6.1.0</jakarta-servlet-api.version>
-        <branch-path-uri-rewrite-filter.version>7.0.0-SNAPSHOT</branch-path-uri-rewrite-filter.version>
+        <branch-path-uri-rewrite-filter.version>7.0.0</branch-path-uri-rewrite-filter.version>
         <mockito.version>5.23.0</mockito.version>
         <localstack.version>1.19.3</localstack.version>
         <io.dropwizard.version>4.2.25</io.dropwizard.version>
