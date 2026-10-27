@@ -58,7 +58,7 @@
         <reporting-core.version>9.0.0</reporting-core.version>
         <ihtsdo-spring-sso.version>7.0.0</ihtsdo-spring-sso.version>
         <snomed-boot.version>7.0.0</snomed-boot.version>
-        <snomed-drools.version>7.0.0</snomed-drools.version>
+        <snomed-drools.version>7.1.0-SNAPSHOT</snomed-drools.version>
         <snomed-owl-toolkit.version>7.0.0</snomed-owl-toolkit.version>
         <snomed-utilities.version>3.0.0</snomed-utilities.version>
         <snomed-template-parser.version>6.0.0</snomed-template-parser.version>
